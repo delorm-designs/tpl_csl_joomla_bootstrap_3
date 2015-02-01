@@ -54,19 +54,6 @@ $this->document->addScriptDeclaration('jQuery(function() {
 		<h1><?php echo $this->escape($this->params->get('page_heading')); ?></h1>
 	<?php endif; ?>
 	<div class="<?php echo ($this->item->state) ? '' : 'system-unpublished'; ?>">
-		<div class="btn-group pull-right">
-			<a class="btn dropdown-toggle" data-toggle="dropdown" href="#">
-				<i class="icon-cog"></i>
-				<span class="caret"></span>
-			</a>
-			<ul class="dropdown-menu">
-				<li class="email-icon"><?php echo JHtml::_('icon.email', $this->item, $this->params, array('type' => 'speaker')); ?></li>
-				<?php
-				if ($canEdit or ($canEditOwn and ($user->id == $this->item->created_by))) : ?>
-					<li class="edit-icon"><?php echo JHtml::_('icon.edit', $this->item, $this->params, array('type' => 'speaker')); ?></li>
-				<?php endif; ?>
-			</ul>
-		</div>
 		<?php echo JLayoutHelper::render('blocks.speaker', array('item' => $this->item, 'params' => $this->params, 'columns' => $this->columns)); ?>
 	</div>
 	<div class="clearfix"></div>

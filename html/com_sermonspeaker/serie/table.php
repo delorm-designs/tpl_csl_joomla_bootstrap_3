@@ -28,27 +28,6 @@ $player		= SermonspeakerHelperSermonspeaker::getPlayer($this->items);
 		<h1><?php echo $this->escape($this->params->get('page_heading')); ?></h1>
 	<?php endif; ?>
 	<div class="<?php echo ($this->item->state) ? '': 'system-unpublished'; ?>">
-		<div class="btn-group pull-right">
-			<a class="btn dropdown-toggle" data-toggle="dropdown" href="#">
-				<i class="icon-cog"></i>
-				<span class="caret"></span>
-			</a>
-			<ul class="dropdown-menu">
-				<?php if (in_array('serie:download', $this->col_serie)) : ?>
-					<li class="download-icon">
-						<a href="<?php echo JRoute::_('index.php?view=serie&layout=download&tmpl=component&id=' . $this->item->slug); ?>" class="modal" rel="{handler:'iframe',size:{x:400,y:200}}">
-							<i class="icon-download" > </i> 
-							<?php echo JText::_('COM_SERMONSPEAKER_DOWNLOADSERIES_LABEL'); ?>
-						</a>
-					</li>
-				<?php endif; ?>
-				<li class="email-icon"><?php echo JHtml::_('icon.email', $this->item, $this->params, array('type' => 'serie')); ?></li>
-				<?php
-				if ($canEdit or ($canEditOwn and ($user->id == $this->item->created_by))) : ?>
-					<li class="edit-icon"><?php echo JHtml::_('icon.edit', $this->item, $this->params, array('type' => 'serie')); ?></li>
-				<?php endif; ?>
-			</ul>
-		</div>
 		<div class="page-header">
 			<a href="<?php echo JRoute::_(SermonspeakerHelperRoute::getSerieRoute($this->item->slug)); ?>">
 				<h2><?php echo $this->item->title; ?></h2>
