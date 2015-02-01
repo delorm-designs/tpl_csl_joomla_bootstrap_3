@@ -19,8 +19,9 @@ if (typeof modBootstrapAccordionMenu_hover === "undefined") {
 </script>
 <?php endif; ?>
 <div class="accordion" id="<?php echo $tag_id; ?>">
-    <div class="accordion-group">
+    <ul class="accordion-group">
         <?php foreach($parents as $parent) : ?>
+        <li>
         <?php $collapse_status = ($parent->active) ? 'in' : 'out'; ?>
         <div class="accordion-heading">
             <?php if(!empty($parent->childs)) : ?>
@@ -36,6 +37,7 @@ if (typeof modBootstrapAccordionMenu_hover === "undefined") {
             </div>
         </div>
         <?php endif; ?>
+        </li>
         <?php endforeach; ?>
-    </div>
+    </ul>
 </div>
