@@ -3,19 +3,66 @@
 
 	<fields name="thememagic" addfieldpath="/plugins/system/t3/includes/depend">
 
-		<fieldset name="typo_params" label="T3_TM_TYPO">
-			<field name="typo_params_default" type="t3depend" function="@group">
-				<option for="font-family-base" value="undefined">font-family-base-custom</option>
-				<option for="headings-font-family" value="undefined">headings-font-family-custom</option>
+        <fieldset name="base_params" label="T3_TM_BASE">
+
+            <field name="t3-image-path" type="text" class="input-large"
+                   label="T3_TM_VARS_IMAGE_PATH_LABEL"
+                   description="T3_TM_VARS_IMAGE_PATH_DESC" />
+
+            <field name="brand-primary" type="color" class="t3tm-color"
+                   label="T3_TM_VARS_PRIMARY_COLOR_LABEL"
+                   description="T3_TM_VARS_PRIMARY_COLOR_DESC" />
+
+            <field name="brand-secondary" type="color" class="t3tm-color"
+                   label="T3_TM_VARS_SECONDARY_COLOR_LABEL"
+                   description="T3_TM_VARS_SECONDARY_COLOR_DESC" />
+
+            <field name="body-bg" type="color" class="t3tm-color"
+                   label="T3_TM_VARS_BODY_BKG_LABEL"
+                   description="T3_TM_VARS_BODY_BKG_DESC" />
+
+            <field name="text-color" type="color" class="t3tm-color"
+                   label="T3_TM_VARS_TEXT_COLOR_LABEL"
+                   description="T3_TM_VARS_TEXT_COLOR_DESC" />
+
+            <field name="headings-color" type="color" class="t3tm-color"
+                   label="T3_TM_VARS_HEADING_COLOR_LABEL"
+                   description="T3_TM_VARS_HEADING_COLOR_DESC" />
+
+            <field name="link-color" type="color" class="t3tm-color"
+                   label="T3_TM_VARS_LINK_COLOR_LABEL"
+                   description="T3_TM_VARS_LINK_COLOR_DESC" />
+
+            <field name="content-border-color" type="color" class="t3tm-color"
+                   label="T3_TM_VARS_CONTENT_BORDER_COLOR_LABEL"
+                   description="T3_TM_VARS_CONTENT_BORDER_COLOR_DESC" />
+
+        </fieldset>
+
+		<fieldset name="forms_params" label="T3_TM_FORMS">
+			<field name="forms_params_default" type="t3depend" function="@group">
+				<option for="form-label-font-family" value="undefined">form-label-font-family-custom</option>
+				<option for="form-input-font-family" value="undefined">form-input-font-family-custom</option>
 			</field>
 
-			<field name="font-size-base" type="text" size="10" class="input-tiny t3tm-dimension" 
-				label="T3_TM_VARS_FONTSIZE_LABEL"
-				description="T3_TM_VARS_FONTSIZE_DESC" />
+            <field type="spacer" name="forms_label_styles_spacer" class=""
+                   label="Form Label Styles&lt;hr style=&quot;width: 90%; margin: 0px; position: absolute; border-color: #666666;&quot;/&gt;" />
 
-			<field name="font-family-base" type="list"
-				label="T3_TM_VARS_FONTFAMILY_LABEL" 
-				description="T3_TM_VARS_FONTFAMILY_DESC" >
+			<field name="form-label-font-size" type="text" size="10" class="input-tiny t3tm-dimension"
+				label="T3_TM_VARS_FORM_LABEL_FONT_SIZE_LABEL"
+				description="T3_TM_VARS_FORM_LABEL_FONT_SIZE_DESC" />
+
+            <field name="form-label-font-style" type="text" class="input-small"
+                   label="T3_TM_VARS_FORM_LABEL_FONT_STYLE_LABEL"
+                   description="T3_TM_VARS_FORM_LABEL_FONT_STYLE_DESC" />
+
+            <field name="form-label-font-weight" type="text" class="input-small"
+                   label="T3_TM_VARS_FORM_LABEL_FONT_WEIGHT_LABEL"
+                   description="T3_TM_VARS_FORM_LABEL_FONT_WEIGHT_DESC" />
+
+			<field name="form-label-font-family" type="list"
+				label="T3_TM_VARS_FORM_LABEL_FONT_FAMILY_LABEL"
+				description="T3_TM_VARS_FORM_LABEL_FONT_FAMILY_DESC" >
 				<option value="">JDEFAULT</option>
 				<option value="sans-serif">T3_TM_VARS_FONTFAMILY_SANS_SERIF</option>
 				<option value="serif">T3_TM_VARS_FONTFAMILY_SERIF</option>
@@ -23,80 +70,501 @@
 				<option value="undefined">T3_TM_VARS_FONTFAMILY_CUSTOM</option>  
 			</field>
 
-			<field name="font-family-base-custom" type="text" size="30" class="t3tm-font"
-				label="T3_TM_VARS_FONTFAMILY_CUSTOM_LABEL"
-				description="T3_TM_VARS_FONTFAMILY_CUSTOM_DESC" />
+			<field name="form-label-font-family-custom" type="text" size="30" class="t3tm-font"
+				label="T3_TM_VARS_FORM_LABEL_FONT_FAMILY_CUSTOM_LABEL"
+				description="T3_TM_VARS_FORM_LABEL_FONT_FAMILY_CUSTOM_DESC" />
 
-			<field name="headings-font-family" type="list"
-				label="T3_TM_VARS_HEADINGFONTFAMILY_LABEL" 
-				description="T3_TM_VARS_HEADINGFONTFAMILY_DESC" >
-				<option value="">JDEFAULT</option>
-				<option value="sans-serif">T3_TM_VARS_FONTFAMILY_SANS_SERIF</option>
-				<option value="serif">T3_TM_VARS_FONTFAMILY_SERIF</option>
-				<option value="monospace">T3_TM_VARS_FONTFAMILY_MONOSPACE</option>
-				<option value="undefined">T3_TM_VARS_FONTFAMILY_CUSTOM</option>  
-			</field>
-			<field name="headings-font-family-custom" type="text" size="30" class="t3tm-font"
-				label="T3_TM_VARS_FONTFAMILY_CUSTOM_LABEL"
-				description="T3_TM_VARS_FONTFAMILY_CUSTOM_DESC" />
+            <field name="form-label-font-color" type="color" class="t3tm-color"
+                   label="T3_TM_VARS_FORM_LABEL_FONT_COLOR_LABEL"
+                   description="T3_TM_VARS_FORM_LABEL_FONT_COLOR_DESC" />
 
-		</fieldset>
+            <field type="spacer" name="forms_input_styles_spacer" class=""
+                   label="Form Input Styles&lt;hr style=&quot;width: 90%; margin: 0px; position: absolute; border-color: #666666;&quot;/&gt;" />
 
-		<fieldset name="colors_params" label="T3_TM_COLORS">        
-			<field name="brand-primary" type="color" class="t3tm-color" label="T3_TM_VARS_PRIMARY_COLOR_LABEL" description="T3_TM_VARS_PRIMARY_COLOR_DESC" />
-			<!--field name="brand-secondary" type="color" class="t3tm-color" label="T3_TM_VARS_SECONDARY_COLOR_LABEL" description="T3_TM_VARS_SECONDARY_COLOR_DESC" /-->
-			<field name="body-bg" type="color" class="t3tm-color" label="T3_TM_VARS_BODY_BKG_LABEL" description="T3_TM_VARS_BODY_BKG_DESC" />
-			<field name="text-color" type="color" class="t3tm-color" label="T3_TM_VARS_TEXT_COLOR_LABEL" description="T3_TM_VARS_TEXT_COLOR_DESC" />
-			<field name="headings-color" type="color" class="t3tm-color" label="T3_TM_VARS_HEADING_COLOR_LABEL" description="T3_TM_VARS_HEADING_COLOR_DESC" />
-			<field name="link-color" type="color" class="t3tm-color" label="T3_TM_VARS_LINK_COLOR_LABEL" description="T3_TM_VARS_LINK_COLOR_DESC" />
-		</fieldset>
+            <field name="form-input-font-size" type="text" size="10" class="input-tiny t3tm-dimension"
+                   label="T3_TM_VARS_FORM_INPUT_FONT_SIZE_LABEL"
+                   description="T3_TM_VARS_FORM_INPUT_FONT_SIZE_DESC" />
 
-		<fieldset name="visual_params" label="T3_TM_VISUAL">
-			<field name="border-radius-base" type="text" class="input-tiny t3tm-dimension" label="T3_TM_VARS_ELEMENT_RADIUS_BASE_LABEL" description="T3_TM_VARS_ELEMENT_RADIUS_BASE_DESC" />
-			<field name="border-radius-large" type="text" class="input-tiny t3tm-dimension" label="T3_TM_VARS_ELEMENT_RADIUS_LARGE_LABEL" description="T3_TM_VARS_ELEMENT_RADIUS_LARGE_DESC" />
-			<field name="border-radius-small" type="text" class="input-tiny t3tm-dimension" label="T3_TM_VARS_ELEMENT_RADIUS_SMALL_LABEL" description="T3_TM_VARS_ELEMENT_RADIUS_SMALL_DESC" />
-		</fieldset>
+            <field name="form-input-font-style" type="text" class="input-small"
+                   label="T3_TM_VARS_FORM_INPUT_FONT_STYLE_LABEL"
+                   description="T3_TM_VARS_FORM_INPUT_FONT_STYLE_DESC" />
 
-		<fieldset name="module_params" label="T3_TM_MODULE">
-			<field name="t3-module-bg" type="color" class="t3tm-color" label="T3_TM_VARS_MODULE_BGCOLOR_LABEL" description="T3_TM_VARS_MODULE_BGCOLOR_DESC" />
-			<field name="t3-module-color" type="color" class="t3tm-color" label="T3_TM_VARS_MODULE_COLOR_LABEL" description="T3_TM_VARS_MODULE_COLOR_DESC" />
-			<field name="t3-module-title-bg" type="color" class="t3tm-color" label="T3_TM_VARS_MODULE_TITLE_BGCOLOR_LABEL" description="T3_TM_VARS_MODULE_TITLE_BGCOLOR_DESC" />
-			<field name="t3-module-title-color" type="color" class="t3tm-color" label="T3_TM_VARS_MODULE_TITLE_COLOR_LABEL" description="T3_TM_VARS_MODULE_TITLE_COLOR_DESC" />
-		</fieldset>
+            <field name="form-input-font-weight" type="text" class="input-small"
+                   label="T3_TM_VARS_FORM_INPUT_FONT_WEIGHT_LABEL"
+                   description="T3_TM_VARS_FORM_INPUT_FONT_WEIGHT_DESC" />
 
-		<fieldset name="spotlight_params" label="T3_TM_SPOTLIGHT">
-			<field name="t3-spotlight-background" type="color" class="t3tm-color" label="T3_TM_VARS_SPL_BGCOLOR_LABEL" description="T3_TM_VARS_SPL_BGCOLOR_DESC" />
-			<field name="t3-spotlight-text-color" type="color" class="t3tm-color" label="T3_TM_VARS_SPL_COLOR_LABEL" description="T3_TM_VARS_SPL_COLOR_DESC" />
-		</fieldset>
+            <field name="form-input-font-family" type="list"
+                   label="T3_TM_VARS_FORM_INPUT_FONT_FAMILY_LABEL"
+                   description="T3_TM_VARS_FORM_INPUT_FONT_FAMILY_DESC" >
+                <option value="">JDEFAULT</option>
+                <option value="sans-serif">T3_TM_VARS_FONTFAMILY_SANS_SERIF</option>
+                <option value="serif">T3_TM_VARS_FONTFAMILY_SERIF</option>
+                <option value="monospace">T3_TM_VARS_FONTFAMILY_MONOSPACE</option>
+                <option value="undefined">T3_TM_VARS_FONTFAMILY_CUSTOM</option>
+            </field>
 
-		<fieldset name="links_params" label="T3_TM_FOOTER">
+            <field name="form-input-font-family-custom" type="text" size="30" class="t3tm-font"
+                   label="T3_TM_VARS_FORM_INPUT_FONT_FAMILY_CUSTOM_LABEL"
+                   description="T3_TM_VARS_FORM_INPUT_FONT_FAMILY_CUSTOM_DESC" />
 
-			<field name="t3-footer-background" type="color" class="t3tm-color" label="T3_VARS_FOOTER_BG_LABEL" description="T3_VARS_FOOTER_BG_DESC" />
-			<field name="t3-footer-text-color" type="color" class="t3tm-color" label="T3_VARS_FOOTER_COLOR_LABEL" description="T3_VARS_FOOTER_COLOR_DESC" />
-			
-			<field name="t3-footer-module-background" type="color" class="t3tm-color" label="T3_VARS_FOOTER_MOD_BG_LABEL" description="T3_VARS_FOOTER_MOD_BG_DESC" />
-			<field name="t3-footer-module-text-color" type="color" class="t3tm-color" label="T3_VARS_FOOTER_MOD_COLOR_LABEL" description="T3_VARS_FOOTER_MOD_COLOR_DESC" />
-			<field name="t3-footer-module-title-color" type="color" class="t3tm-color" label="T3_VARS_FOOTER_MOD_TCOLOR_LABEL" description="T3_VARS_FOOTER_MOD_TCOLOR_DESC" />
-		</fieldset>
+            <field name="form-input-font-color" type="color" class="t3tm-color"
+                   label="T3_TM_VARS_FORM_INPUT_FONT_COLOR_LABEL"
+                   description="T3_TM_VARS_FORM_INPUT_FONT_COLOR_DESC" />
 
-		<fieldset name="grid_params" label="T3_TM_GRID">
-			<!-- Grid -->
+            <field type="spacer" name="forms_input_border_spacer" class=""
+                   label="Form Border Styles&lt;hr style=&quot;width: 90%; margin: 0px; position: absolute; border-color: #666666;&quot;/&gt;" />
 
-			<field name="container-lg" type="text" default="1170px" class="t3tm-dimension" label="T3_TM_VARS_SCFD_LG_WIDTH_LABEL" description="T3_TM_VARS_SCFD_LG_WIDTH_DESC" />
+            <field name="form-input-border-color" type="color" class="t3tm-color"
+                   label="T3_TM_VARS_FORM_INPUT_BORDER_COLOR_LABEL"
+                   description="T3_TM_VARS_FORM_INPUT_BORDER_COLOR_DESC" />
 
-			<field name="container-md" type="text" default="970px" class="t3tm-dimension" label="T3_TM_VARS_SCFD_MID_WIDTH_LABEL" description="T3_TM_VARS_SCFD_MID_WIDTH_DESC" />
-			
-			<field name="container-sm" type="text" default="750px" class="t3tm-dimension" label="T3_TM_VARS_SCFD_SM_WIDTH_LABEL" description="T3_TM_VARS_SCFD_SM_WIDTH_DESC" />
-			
-			<field name="grid-gutter-width" type="text" default="30px" class="t3tm-dimension" label="T3_TM_VARS_SCFD_GUTTER_LABEL" description="T3_TM_VARS_SCFD_GUTTER_DESC" />
+            <field name="form-addon-border-color" type="color" class="t3tm-color"
+                   label="T3_TM_VARS_FORM_ADDON_BORDER_COLOR_LABEL"
+                   description="T3_TM_VARS_FORM_ADDON_BORDER_COLOR_DESC" />
 
-			<!-- End Grid -->
-		</fieldset>
-    
-		<fieldset name="advanced_params" label="T3_TM_ADVANCED">
-			<field name="import-external-urls" type="textarea" cols="30" rows="5"
-				label="T3_TM_VARS_IMPORT_EXTERNAL_URLS_LABEL"
-				description="T3_TM_VARS_IMPORT_EXTERNAL_URLS_DESC" />
-    </fieldset>
-	</fields>
+            <field type="spacer" name="forms_addon_border_spacer" class=""
+                   label="Form Background Styles&lt;hr style=&quot;width: 90%; margin: 0px; position: absolute; border-color: #666666;&quot;/&gt;" />
+
+            <field name="form-input-background-color" type="color" class="t3tm-color"
+                   label="T3_TM_VARS_FORM_INPUT_BACKGROUND_COLOR_LABEL"
+                   description="T3_TM_VARS_FORM_INPUT_BACKGROUND_COLOR_DESC" />
+
+            <field name="form-addon-background-color" type="color" class="t3tm-color"
+                   label="T3_TM_VARS_FORM_ADDON_BACKGROUND_COLOR_LABEL"
+                   description="T3_TM_VARS_FORM_ADDON_BACKGROUND_COLOR_DESC" />
+
+            <field type="spacer" name="forms_sidebar_sizes_spacer" class=""
+                   label="Sidebar Form Styles&lt;hr style=&quot;width: 90%; margin: 0px; position: absolute; border-color: #666666;&quot;/&gt;" />
+
+            <field name="sidebar-form-input-font-size" type="text" class="input-small"
+                   label="T3_TM_VARS_SIDEBAR_FORM_INPUT_FONT_SIZE_LABEL"
+                   description="T3_TM_VARS_SIDEBAR_FORM_INPUT_FONT_SIZE_DESC" />
+
+            <field name="sidebar-form-input-min-height" type="text" class="input-small"
+                   label="T3_TM_VARS_SIDEBAR_FORM_INPUT_MIN_HEIGHT_LABEL"
+                   description="T3_TM_VARS_SIDEBAR_FORM_INPUT_MIN_HEIGHT_DESC" />
+
+        </fieldset>
+
+        <fieldset name="links_params" label="T3_TM_FOOTER">
+
+            <field name="t3-footer-background" type="color" class="t3tm-color" label="T3_VARS_FOOTER_BG_LABEL" description="T3_VARS_FOOTER_BG_DESC" />
+            <field name="t3-footer-text-color" type="color" class="t3tm-color" label="T3_VARS_FOOTER_COLOR_LABEL" description="T3_VARS_FOOTER_COLOR_DESC" />
+
+            <field name="t3-footer-module-background" type="color" class="t3tm-color" label="T3_VARS_FOOTER_MOD_BG_LABEL" description="T3_VARS_FOOTER_MOD_BG_DESC" />
+            <field name="t3-footer-module-text-color" type="color" class="t3tm-color" label="T3_VARS_FOOTER_MOD_COLOR_LABEL" description="T3_VARS_FOOTER_MOD_COLOR_DESC" />
+            <field name="t3-footer-module-title-color" type="color" class="t3tm-color" label="T3_VARS_FOOTER_MOD_TCOLOR_LABEL" description="T3_VARS_FOOTER_MOD_TCOLOR_DESC" />
+
+        </fieldset>
+
+        <fieldset name="header_params" label="T3_TM_HEADER">
+
+            <field name="header_params_default" type="t3depend" function="@group">
+                <option for="header-font-family" value="undefined">header-font-family-custom</option>
+            </field>
+
+            <field type="spacer" name="header_styles_spacer" class=""
+                   label="Header Style&lt;hr style=&quot;width: 90%; margin: 0px; position: absolute; border-color: #666666;&quot;/&gt;" />
+
+            <field name="header-text-lines" type="text" class="input-small"
+                   label="T3_TM_VARS_HEADER_TEXT_LINES_LABEL"
+                   description="T3_TM_VARS_HEADER_TEXT_LINES_DESC" />
+
+            <field name="header-total-lines" type="text" class="input-small"
+                   label="T3_TM_VARS_HEADER_TOTAL_LINES_LABEL"
+                   description="T3_TM_VARS_HEADER_TOTAL_LINES_DESC" />
+
+            <field type="spacer" name="header_styles_font_pacer" class=""
+                   label="Header Font Style&lt;hr style=&quot;width: 90%; margin: 0px; position: absolute; border-color: #666666;&quot;/&gt;" />
+
+            <field name="header-font-size" type="text" size="10" class="input-tiny t3tm-dimension"
+                   label="T3_TM_VARS_HEADER_FONT_SIZE_LABEL"
+                   description="T3_TM_VARS_HEADER_FONT_SIZE_DESC" />
+
+            <field name="header-font-margin" type="text" class="input-small"
+                   label="T3_TM_VARS_HEADER_FONT_MARGIN_LABEL"
+                   description="T3_TM_VARS_FONT_MARGIN_LINES_DESC" />
+
+            <field name="header-font-style" type="text" class="input-small"
+                   label="T3_TM_VARS_HEADER_FONT_STYLE_LABEL"
+                   description="T3_TM_VARS_HEADER_FONT_STYLE_DESC" />
+
+            <field name="header-font-weight" type="text" class="input-small"
+                   label="T3_TM_VARS_HEADER_FONT_WEIGHT_LABEL"
+                   description="T3_TM_VARS_HEADER_FONT_WEIGHT_DESC" />
+
+            <field name="header-font-family" type="list"
+                   label="T3_TM_VARS_HEADER_FONT_FAMILY_LABEL"
+                   description="T3_TM_VARS_HEADER_FONT_FAMILY_DESC" >
+                <option value="">JDEFAULT</option>
+                <option value="sans-serif">T3_TM_VARS_FONTFAMILY_SANS_SERIF</option>
+                <option value="serif">T3_TM_VARS_FONTFAMILY_SERIF</option>
+                <option value="monospace">T3_TM_VARS_FONTFAMILY_MONOSPACE</option>
+                <option value="undefined">T3_TM_VARS_FONTFAMILY_CUSTOM</option>
+            </field>
+
+            <field name="header-font-family-custom" type="text" size="30" class="t3tm-font"
+                   label="T3_TM_VARS_HEADER_FONT_FAMILY_CUSTOM_LABEL"
+                   description="T3_TM_VARS_HEADER_FONT_FAMILY_CUSTOM_DESC" />
+
+            <field name="header-font-color" type="color" class="t3tm-color"
+                   label="T3_TM_VARS_HEADER_FONT_COLOR_LABEL"
+                   description="T3_TM_VARS_HEADER_FONT_COLOR_DESC" />
+
+        </fieldset>
+
+        <fieldset name="typo_params" label="T3_TM_TYPO">
+            <field name="typo_params_default" type="t3depend" function="@group">
+                <option for="font-family-base" value="undefined">font-family-base-custom</option>
+                <option for="headings-font-family" value="undefined">headings-font-family-custom</option>
+            </field>
+
+            <field name="font-size-base" type="text" size="10" class="input-tiny t3tm-dimension"
+                   label="T3_TM_VARS_FONTSIZE_LABEL"
+                   description="T3_TM_VARS_FONTSIZE_DESC" />
+
+            <field name="font-family-base" type="list"
+                   label="T3_TM_VARS_FONTFAMILY_LABEL"
+                   description="T3_TM_VARS_FONTFAMILY_DESC" >
+                <option value="">JDEFAULT</option>
+                <option value="sans-serif">T3_TM_VARS_FONTFAMILY_SANS_SERIF</option>
+                <option value="serif">T3_TM_VARS_FONTFAMILY_SERIF</option>
+                <option value="monospace">T3_TM_VARS_FONTFAMILY_MONOSPACE</option>
+                <option value="undefined">T3_TM_VARS_FONTFAMILY_CUSTOM</option>
+            </field>
+
+            <field name="font-family-base-custom" type="text" size="30" class="t3tm-font"
+                   label="T3_TM_VARS_FONTFAMILY_CUSTOM_LABEL"
+                   description="T3_TM_VARS_FONTFAMILY_CUSTOM_DESC" />
+
+            <field name="headings-font-family" type="list"
+                   label="T3_TM_VARS_HEADINGFONTFAMILY_LABEL"
+                   description="T3_TM_VARS_HEADINGFONTFAMILY_DESC" >
+                <option value="">JDEFAULT</option>
+                <option value="sans-serif">T3_TM_VARS_FONTFAMILY_SANS_SERIF</option>
+                <option value="serif">T3_TM_VARS_FONTFAMILY_SERIF</option>
+                <option value="monospace">T3_TM_VARS_FONTFAMILY_MONOSPACE</option>
+                <option value="undefined">T3_TM_VARS_FONTFAMILY_CUSTOM</option>
+            </field>
+
+            <field name="headings-font-family-custom" type="text" size="30" class="t3tm-font"
+                   label="T3_TM_VARS_FONTFAMILY_CUSTOM_LABEL"
+                   description="T3_TM_VARS_FONTFAMILY_CUSTOM_DESC" />
+
+        </fieldset>
+
+        <fieldset name="module_params" label="T3_TM_MODULE">
+
+            <field name="t3-module-bg" type="color" class="t3tm-color" label="T3_TM_VARS_MODULE_BGCOLOR_LABEL" description="T3_TM_VARS_MODULE_BGCOLOR_DESC" />
+            <field name="t3-module-color" type="color" class="t3tm-color" label="T3_TM_VARS_MODULE_COLOR_LABEL" description="T3_TM_VARS_MODULE_COLOR_DESC" />
+            <field name="t3-module-title-color" type="color" class="t3tm-color" label="T3_TM_VARS_MODULE_TITLE_COLOR_LABEL" description="T3_TM_VARS_MODULE_TITLE_COLOR_DESC" />
+
+            <field name="module_params_default" type="t3depend" function="@group">
+                <option for="module-title-font-family" value="undefined">module-title-font-family-custom</option>
+            </field>
+
+            <field name="module-title-height" type="text" class="input-small"
+                   label="T3_TM_VARS_MODULE_TITLE_HEIGHT_LABEL"
+                   description="T3_TM_VARS_MODULE_TITLE_HEIGHT_LINES_DESC" />
+
+            <field name="module-title-background-color" type="text" class="input-small"
+                   label="T3_TM_VARS_MODULE_TITLE_BACKGROUND_COLOR_LABEL"
+                   description="T3_TM_VARS_MODULE_TITLE_BACKGROUND_COLOR_DESC" />
+
+            <field type="spacer" name="module_title_font_styles_pacer" class=""
+                   label="Module Title Font Style&lt;hr style=&quot;width: 90%; margin: 0px; position: absolute; border-color: #666666;&quot;/&gt;" />
+
+            <field name="module-title-font-size" type="text" size="10" class="input-tiny t3tm-dimension"
+                   label="T3_TM_VARS_MODULE_TITLE_FONT_SIZE_LABEL"
+                   description="T3_TM_VARS_MODULE_TITLE_FONT_SIZE_DESC" />
+
+            <field name="module-title-font-style" type="text" class="input-small"
+                   label="T3_TM_VARS_MODULE_TITLE_FONT_STYLE_LABEL"
+                   description="T3_TM_VARS_MODULE_TITLE_FONT_STYLE_DESC" />
+
+            <field name="module-title-font-weight" type="text" class="input-small"
+                   label="T3_TM_VARS_MODULE_TITLE_FONT_WEIGHT_LABEL"
+                   description="T3_TM_VARS_MODULE_TITLE_FONT_WEIGHT_DESC" />
+
+            <field name="module-title-font-family" type="list"
+                   label="T3_TM_VARS_MODULE_TITLE_FONT_FAMILY_LABEL"
+                   description="T3_TM_VARS_MODULE_TITLE_FONT_FAMILY_DESC" >
+                <option value="">JDEFAULT</option>
+                <option value="sans-serif">T3_TM_VARS_FONTFAMILY_SANS_SERIF</option>
+                <option value="serif">T3_TM_VARS_FONTFAMILY_SERIF</option>
+                <option value="monospace">T3_TM_VARS_FONTFAMILY_MONOSPACE</option>
+                <option value="undefined">T3_TM_VARS_FONTFAMILY_CUSTOM</option>
+            </field>
+
+            <field name="module-title-font-family-custom" type="text" size="30" class="t3tm-font"
+                   label="T3_TM_VARS_MODULE_TITLE_FONT_FAMILY_CUSTOM_LABEL"
+                   description="T3_TM_VARS_MODULE_TITLE_FONT_FAMILY_CUSTOM_DESC" />
+
+            <field name="module-title-font-color" type="color" class="t3tm-color"
+                   label="T3_TM_VARS_MODULE_TITLE_FONT_COLOR_LABEL"
+                   description="T3_TM_VARS_MODULE_TITLE_FONT_COLOR_DESC" />
+
+            <field name="t3-module-title-bg-color" type="color" class="t3tm-color" label="T3_TM_VARS_MODULE_TITLE_BGCOLOR_LABEL" description="T3_TM_VARS_MODULE_TITLE_BGCOLOR_DESC" />
+
+        </fieldset>
+
+        <fieldset name="accordion_params" label="T3_TM_ACCORDION">
+            <field name="accordion_params_default" type="t3depend" function="@group">
+                <option for="accordion-font-family" value="undefined">accordion-font-family-custom</option>
+            </field>
+
+            <field type="spacer" name="accordion_styles_font_pacer" class=""
+                   label="Accordion Font Style&lt;hr style=&quot;width: 90%; margin: 0px; position: absolute; border-color: #666666;&quot;/&gt;" />
+
+            <field name="accordion-font-size" type="text" size="10" class="input-tiny t3tm-dimension"
+                   label="T3_TM_VARS_ACCORDION_FONT_SIZE_LABEL"
+                   description="T3_TM_VARS_ACCORDION_FONT_SIZE_DESC" />
+
+            <field name="accordion-font-style" type="text" class="input-small"
+                   label="T3_TM_VARS_ACCORDION_FONT_STYLE_LABEL"
+                   description="T3_TM_VARS_ACCORDION_FONT_STYLE_DESC" />
+
+            <field name="accordion-font-weight" type="text" class="input-small"
+                   label="T3_TM_VARS_ACCORDION_FONT_WEIGHT_LABEL"
+                   description="T3_TM_VARS_ACCORDION_FONT_WEIGHT_DESC" />
+
+            <field name="accordion-font-family" type="list"
+                   label="T3_TM_VARS_ACCORDION_FONT_FAMILY_LABEL"
+                   description="T3_TM_VARS_ACCORDION_FONT_FAMILY_DESC" >
+                <option value="">JDEFAULT</option>
+                <option value="sans-serif">T3_TM_VARS_FONTFAMILY_SANS_SERIF</option>
+                <option value="serif">T3_TM_VARS_FONTFAMILY_SERIF</option>
+                <option value="monospace">T3_TM_VARS_FONTFAMILY_MONOSPACE</option>
+                <option value="undefined">T3_TM_VARS_FONTFAMILY_CUSTOM</option>
+            </field>
+
+            <field name="accordion-font-family-custom" type="text" size="30" class="t3tm-font"
+                   label="T3_TM_VARS_ACCORDION_FONT_FAMILY_CUSTOM_LABEL"
+                   description="T3_TM_VARS_ACCORDION_FONT_FAMILY_CUSTOM_DESC" />
+
+            <field name="accordion-font-color" type="color" class="t3tm-color"
+                   label="T3_TM_VARS_ACCORDION_FONT_COLOR_LABEL"
+                   description="T3_TM_VARS_ACCORDION_FONT_COLOR_DESC" />
+
+            <field name="accordion-item-min-height" type="text" class="input-small"
+                   label="T3_TM_VARS_ACCORDION_ITEM_MIN_HEIGHT_LABEL"
+                   description="T3_TM_VARS_ACCORDION_ITEM_MIN_HEIGHT_DESC" />
+
+            <field type="spacer" name="accordion_collapsed_spacer" class=""
+                   label="Accordion Collapsed Colors&lt;hr style=&quot;width: 90%; margin: 0px; position: absolute; border-color: #666666;&quot;/&gt;" />
+
+            <field name="accordion-collapsed-base-color" type="color" class="t3tm-color"
+                   label="T3_TM_VARS_ACCORDION_COLLAPSED_BASE_COLOR_LABEL"
+                   description="T3_TM_VARS_ACCORDION_COLLAPSED_BASE_COLOR_DESC" />
+
+            <field name="accordion-collapsed-hover-color" type="color" class="t3tm-color"
+                   label="T3_TM_VARS_ACCORDION_COLLAPSED_HOVER_COLOR_LABEL"
+                   description="T3_TM_VARS_ACCORDION_COLLAPSED_HOVER_COLOR_DESC" />
+
+            <field name="accordion-collapsed-active-color" type="color" class="t3tm-color"
+                   label="T3_TM_VARS_ACCORDION_COLLAPSED_ACTIVE_COLOR_LABEL"
+                   description="T3_TM_VARS_ACCORDION_COLLAPSED_ACTIVE_COLOR_DESC" />
+
+            <field type="spacer" name="accordion_expanded_spacer" class=""
+                   label="Accordion Expanded Colors&lt;hr style=&quot;width: 90%; margin: 0px; position: absolute; border-color: #666666;&quot;/&gt;" />
+
+            <field name="accordion-expanded-base-color" type="color" class="t3tm-color"
+                   label="T3_TM_VARS_ACCORDION_EXPANDED_BASE_COLOR_LABEL"
+                   description="T3_TM_VARS_ACCORDION_EXPANDED_BASE_COLOR_DESC" />
+
+            <field name="accordion-expanded-hover-color" type="color" class="t3tm-color"
+                   label="T3_TM_VARS_ACCORDION_EXPANDED_HOVER_COLOR_LABEL"
+                   description="T3_TM_VARS_ACCORDION_EXPANDED_HOVER_COLOR_DESC" />
+
+            <field name="accordion-expanded-active-color" type="color" class="t3tm-color"
+                   label="T3_TM_VARS_ACCORDION_EXPANDED_ACTIVE_COLOR_LABEL"
+                   description="T3_TM_VARS_ACCORDION_EXPANDED_ACTIVE_COLOR_DESC" />
+
+        </fieldset>
+
+        <fieldset name="link_button_params" label="T3_TM_LINK_BUTTON">
+
+            <field name="link_button_params_default" type="t3depend" function="@group">
+                <option for="link-button-font-family" value="undefined">link-button-font-family-custom</option>
+            </field>
+
+            <field type="spacer" name="link_button_styles_spacer" class=""
+                   label="Link Button Style&lt;hr style=&quot;width: 90%; margin: 0px; position: absolute; border-color: #666666;&quot;/&gt;" />
+
+            <field name="link-button-width" type="text" class="input-small"
+                   label="T3_TM_VARS_LINK_BUTTON_WIDTH_LABEL"
+                   description="T3_TM_VARS_LINK_BUTTON_WIDTH_DESC" />
+
+            <field type="spacer" name="link_button_font_styles_spacer" class=""
+                   label="Link Button Font Style&lt;hr style=&quot;width: 90%; margin: 0px; position: absolute; border-color: #666666;&quot;/&gt;" />
+
+            <field name="link-button-font-size" type="text" size="10" class="input-tiny t3tm-dimension"
+                   label="T3_TM_VARS_LINK_BUTTON_FONT_SIZE_LABEL"
+                   description="T3_TM_VARS_LINK_BUTTON_FONT_SIZE_DESC" />
+
+            <field name="link-button-font-style" type="text" class="input-small"
+                   label="T3_TM_VARS_LINK_BUTTON_FONT_STYLE_LABEL"
+                   description="T3_TM_VARS_LINK_BUTTON_FONT_STYLE_DESC" />
+
+            <field name="link-button-font-weight" type="text" class="input-small"
+                   label="T3_TM_VARS_LINK_BUTTON_FONT_WEIGHT_LABEL"
+                   description="T3_TM_VARS_LINK_BUTTON_FONT_WEIGHT_DESC" />
+
+            <field name="link-button-font-family" type="list"
+                   label="T3_TM_VARS_LINK_BUTTON_FONT_FAMILY_LABEL"
+                   description="T3_TM_VARS_LINK_BUTTON_FONT_FAMILY_DESC" >
+                <option value="">JDEFAULT</option>
+                <option value="sans-serif">T3_TM_VARS_FONTFAMILY_SANS_SERIF</option>
+                <option value="serif">T3_TM_VARS_FONTFAMILY_SERIF</option>
+                <option value="monospace">T3_TM_VARS_FONTFAMILY_MONOSPACE</option>
+                <option value="undefined">T3_TM_VARS_FONTFAMILY_CUSTOM</option>
+            </field>
+
+            <field name="link-button-font-family-custom" type="text" size="30" class="t3tm-font"
+                   label="T3_TM_VARS_LINK_BUTTON_FONT_FAMILY_CUSTOM_LABEL"
+                   description="T3_TM_VARS_LINK_BUTTON_FONT_FAMILY_CUSTOM_DESC" />
+
+            <field name="link-button-text-color" type="color" class="t3tm-color"
+                   label="T3_TM_VARS_LINK_BUTTON_TEXT_COLOR_LABEL"
+                   description="T3_TM_VARS_LINK_BUTTON_TEXT_COLOR_DESC" />
+
+            <field name="link-button-link-color" type="color" class="t3tm-color"
+                   label="T3_TM_VARS_LINK_BUTTON_LINK_COLOR_LABEL"
+                   description="T3_TM_VARS_LINK_BUTTON_LINK_COLOR_DESC" />
+
+            <field type="spacer" name="link_button_colors_spacer" class=""
+                   label="Link Button Colors&lt;hr style=&quot;width: 90%; margin: 0px; position: absolute; border-color: #666666;&quot;/&gt;" />
+
+            <field name="link-button-base-color" type="color" class="t3tm-color"
+                   label="T3_TM_VARS_LINK_BUTTON_BASE_COLOR_LABEL"
+                   description="T3_TM_VARS_LINK_BUTTON_BASE_COLOR_DESC" />
+
+            <field name="link-button-hover-color" type="color" class="t3tm-color"
+                   label="T3_TM_VARS_LINK_BUTTON_HOVER_COLOR_LABEL"
+                   description="T3_TM_VARS_LINK_BUTTON_HOVER_COLOR_DESC" />
+
+            <field name="link-button-border-color" type="color" class="t3tm-color"
+                   label="T3_TM_VARS_LINK_BUTTON_BORDER_COLOR_LABEL"
+                   description="T3_TM_VARS_LINK_BUTTON_BORDER_COLOR_DESC" />
+
+        </fieldset>
+
+        <fieldset name="jcalpro_events_params" label="T3_TM_JCALPRO_EVENTS">
+
+            <field name="jcalpro_events_params_default" type="t3depend" function="@group">
+                <option for="jcalpro-events-link-font-family" value="undefined">jcalpro-events-link-font-family-custom</option>
+                <option for="jcalpro-events-date-font-family" value="undefined">jcalpro-events-date-font-family-custom</option>
+                <option for="jcalpro-events-month-font-family" value="undefined">jcalpro-events-month-font-family-custom</option>
+            </field>
+
+            <field type="spacer" name="jcalpro_events_link_font_styles_spacer" class=""
+                   label="JCAL PRO Link Font Style&lt;hr style=&quot;width: 90%; margin: 0px; position: absolute; border-color: #666666;&quot;/&gt;" />
+
+            <field name="jcalpro-events-link-font-size" type="text" size="10" class="input-tiny t3tm-dimension"
+                   label="T3_TM_VARS_JCALPRO_EVENTS_LINK_FONT_SIZE_LABEL"
+                   description="T3_TM_VARS_JCALPRO_EVENTS_LINK_FONT_SIZE_DESC" />
+
+            <field name="jcalpro-events-link-font-style" type="text" class="input-small"
+                   label="T3_TM_VARS_JCALPRO_EVENTS_LINK_FONT_STYLE_LABEL"
+                   description="T3_TM_VARS_JCALPRO_EVENTS_LINK_FONT_STYLE_DESC" />
+
+            <field name="jcalpro-events-link-font-weight" type="text" class="input-small"
+                   label="T3_TM_VARS_JCALPRO_EVENTS_LINK_FONT_WEIGHT_LABEL"
+                   description="T3_TM_VARS_JCALPRO_EVENTS_LINK_FONT_WEIGHT_DESC" />
+
+            <field name="jcalpro-events-link-font-family" type="list"
+                   label="T3_TM_VARS_JCALPRO_EVENTS_LINK_FONT_FAMILY_LABEL"
+                   description="T3_TM_VARS_JCALPRO_EVENTS_LINK_FONT_FAMILY_DESC" >
+                <option value="">JDEFAULT</option>
+                <option value="sans-serif">T3_TM_VARS_FONTFAMILY_SANS_SERIF</option>
+                <option value="serif">T3_TM_VARS_FONTFAMILY_SERIF</option>
+                <option value="monospace">T3_TM_VARS_FONTFAMILY_MONOSPACE</option>
+                <option value="undefined">T3_TM_VARS_FONTFAMILY_CUSTOM</option>
+            </field>
+
+            <field name="jcalpro-events-link-font-family-custom" type="text" size="30" class="t3tm-font"
+                   label="T3_TM_VARS_JCALPRO_EVENTS_LINK_FONT_FAMILY_CUSTOM_LABEL"
+                   description="T3_TM_VARS_JCALPRO_EVENTS_LINK_FONT_FAMILY_CUSTOM_DESC" />
+
+            <field name="jcalpro-events-link-font-color" type="color" class="t3tm-color"
+                   label="T3_TM_VARS_JCALPRO_EVENTS_LINK_FONT_COLOR_LABEL"
+                   description="T3_TM_VARS_JCALPRO_EVENTS_LINK_FONT_COLOR_DESC" />
+
+            <field type="spacer" name="jcalpro_events_date_font_styles_spacer" class=""
+                   label="JCAL PRO Link Font Style&lt;hr style=&quot;width: 90%; margin: 0px; position: absolute; border-color: #666666;&quot;/&gt;" />
+
+            <field name="jcalpro-events-date-font-size" type="text" size="10" class="input-tiny t3tm-dimension"
+                   label="T3_TM_VARS_JCALPRO_EVENTS_DATE_FONT_SIZE_LABEL"
+                   description="T3_TM_VARS_JCALPRO_EVENTS_DATE_FONT_SIZE_DESC" />
+
+            <field name="jcalpro-events-date-font-style" type="text" class="input-small"
+                   label="T3_TM_VARS_JCALPRO_EVENTS_DATE_FONT_STYLE_LABEL"
+                   description="T3_TM_VARS_JCALPRO_EVENTS_DATE_FONT_STYLE_DESC" />
+
+            <field name="jcalpro-events-date-font-weight" type="text" class="input-small"
+                   label="T3_TM_VARS_JCALPRO_EVENTS_DATE_FONT_WEIGHT_LABEL"
+                   description="T3_TM_VARS_JCALPRO_EVENTS_DATE_FONT_WEIGHT_DESC" />
+
+            <field name="jcalpro-events-date-font-family" type="list"
+                   label="T3_TM_VARS_JCALPRO_EVENTS_DATE_FONT_FAMILY_LABEL"
+                   description="T3_TM_VARS_JCALPRO_EVENTS_DATE_FONT_FAMILY_DESC" >
+                <option value="">JDEFAULT</option>
+                <option value="sans-serif">T3_TM_VARS_FONTFAMILY_SANS_SERIF</option>
+                <option value="serif">T3_TM_VARS_FONTFAMILY_SERIF</option>
+                <option value="monospace">T3_TM_VARS_FONTFAMILY_MONOSPACE</option>
+                <option value="undefined">T3_TM_VARS_FONTFAMILY_CUSTOM</option>
+            </field>
+
+            <field name="jcalpro-events-date-font-family-custom" type="text" size="30" class="t3tm-font"
+                   label="T3_TM_VARS_JCALPRO_EVENTS_DATE_FONT_FAMILY_CUSTOM_LABEL"
+                   description="T3_TM_VARS_JCALPRO_EVENTS_DATE_FONT_FAMILY_CUSTOM_DESC" />
+
+            <field name="jcalpro-events-date-font-color" type="color" class="t3tm-color"
+                   label="T3_TM_VARS_JCALPRO_EVENTS_DATE_FONT_COLOR_LABEL"
+                   description="T3_TM_VARS_JCALPRO_EVENTS_DATE_FONT_COLOR_DESC" />
+
+            <field type="spacer" name="jcalpro_events_month_font_styles_spacer" class=""
+                   label="JCAL PRO Link Font Style&lt;hr style=&quot;width: 90%; margin: 0px; position: absolute; border-color: #666666;&quot;/&gt;" />
+
+            <field name="jcalpro-events-month-font-size" type="text" size="10" class="input-tiny t3tm-dimension"
+                   label="T3_TM_VARS_JCALPRO_EVENTS_MONTH_FONT_SIZE_LABEL"
+                   description="T3_TM_VARS_JCALPRO_EVENTS_MONTH_FONT_SIZE_DESC" />
+
+            <field name="jcalpro-events-month-font-style" type="text" class="input-small"
+                   label="T3_TM_VARS_JCALPRO_EVENTS_MONTH_FONT_STYLE_LABEL"
+                   description="T3_TM_VARS_JCALPRO_EVENTS_MONTH_FONT_STYLE_DESC" />
+
+            <field name="jcalpro-events-month-text-align" type="text" class="input-small"
+                   label="T3_TM_VARS_JCALPRO_EVENTS_MONTH_TEXT_ALIGN_LABEL"
+                   description="T3_TM_VARS_JCALPRO_EVENTS_MONTH_TEXT_ALIGN_DESC" />
+
+            <field name="jcalpro-events-month-font-weight" type="text" class="input-small"
+                   label="T3_TM_VARS_JCALPRO_EVENTS_MONTH_FONT_WEIGHT_LABEL"
+                   description="T3_TM_VARS_JCALPRO_EVENTS_MONTH_FONT_WEIGHT_DESC" />
+
+            <field name="jcalpro-events-month-font-family" type="list"
+                   label="T3_TM_VARS_JCALPRO_EVENTS_MONTH_FONT_FAMILY_LABEL"
+                   description="T3_TM_VARS_JCALPRO_EVENTS_MONTH_FONT_FAMILY_DESC" >
+                <option value="">JDEFAULT</option>
+                <option value="sans-serif">T3_TM_VARS_FONTFAMILY_SANS_SERIF</option>
+                <option value="serif">T3_TM_VARS_FONTFAMILY_SERIF</option>
+                <option value="monospace">T3_TM_VARS_FONTFAMILY_MONOSPACE</option>
+                <option value="undefined">T3_TM_VARS_FONTFAMILY_CUSTOM</option>
+            </field>
+
+            <field name="jcalpro-events-month-font-family-custom" type="text" size="30" class="t3tm-font"
+                   label="T3_TM_VARS_JCALPRO_EVENTS_MONTH_FONT_FAMILY_CUSTOM_LABEL"
+                   description="T3_TM_VARS_JCALPRO_EVENTS_MONTH_FONT_FAMILY_CUSTOM_DESC" />
+
+            <field name="jcalpro-events-month-font-color" type="color" class="t3tm-color"
+                   label="T3_TM_VARS_JCALPRO_EVENTS_MONTH_FONT_COLOR_LABEL"
+                   description="T3_TM_VARS_JCALPRO_EVENTS_MONTH_FONT_COLOR_DESC" />
+
+            <field name="jcalpro-events-month-border-color" type="color" class="t3tm-color"
+                   label="T3_TM_VARS_JCALPRO_EVENTS_MONTH_BORDER_COLOR_LABEL"
+                   description="T3_TM_VARS_JCALPRO_EVENTS_MONTH_BORDER_COLOR_DESC" />
+
+        </fieldset>
+
+    </fields>
 </form>

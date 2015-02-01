@@ -1,2 +1,4 @@
-# csl-joomla-bs3-template
-Joomla 2.5/3.x Mobile Responsive Bootstrap 3 based template
+CSL Joomla! 2.5.x/3.x.x Responsive Template
+
+This is a T3 based template that is fully mobile responsive supporting many features.
+
