@@ -1,0 +1,23 @@
+<?php
+/**
+ * @package     SermonSpeaker
+ * @subpackage  Component.Site.Layouts
+ * @author      Thomas Hunziker <admin@sermonspeaker.net>
+ * @copyright   (C) 2014 - Thomas Hunziker
+ * @license     http://www.gnu.org/licenses/gpl.html
+ **/
+
+defined('_JEXEC') or die();
+
+/**
+ * $item    object                    The sermon item
+ * $params  Joomla\Registry\Registry  The item params
+ * $legacy  bool                      Set if coming from SermonspeakerHelperSermonspeaker::SpeakerTooltip()
+ *                                    Item only contains speaker_title, speaker_slug and pic in this case
+ */
+extract($displayData);
+?>
+
+<a href="<?php echo JRoute::_(SermonspeakerHelperRoute::getSpeakerRoute($item->speaker_slug)); ?>" itemprop="url" class="hasTooltip" title="Speaker Bio">
+    <span itemprop="name"><?php echo $item->speaker_title; ?></span>
+</a>

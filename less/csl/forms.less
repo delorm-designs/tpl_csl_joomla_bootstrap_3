@@ -1,0 +1,247 @@
+// ---------------------------------------------------------
+// FORMS
+// ---------------------------------------------------------
+
+// LABEL DEFAULTS
+// ------------------
+label {
+  color: @form-label-font-color;
+  font-size: @form-label-font-size;
+  font-family: @form-label-font-family;
+  font-weight: @form-label-font-weight;
+}
+
+// INPUT DEFAULTS
+// ------------------
+select,
+textarea,
+input[type="text"],
+input[type="password"],
+input[type="datetime"],
+input[type="datetime-local"],
+input[type="date"],
+input[type="month"],
+input[type="time"],
+input[type="week"],
+input[type="number"],
+input[type="email"],
+input[type="url"],
+input[type="search"],
+input[type="tel"],
+input[type="color"],
+.inputbox,
+.form-control {
+  width: 100% !important;
+  color: @form-input-font-color;
+  font-size: @form-input-font-size;
+  font-weight: @form-input-font-weight;
+  font-family: @form-input-font-family;
+  border-radius: @form-input-border-radius;
+  border: 1px solid @form-input-border-color;
+  background-color: @form-input-background-color;
+}
+
+// INPUT FOCUS
+// ------------------
+textarea:focus,
+input[type="text"]:focus,
+input[type="password"]:focus,
+input[type="datetime"]:focus,
+input[type="datetime-local"]:focus,
+input[type="date"]:focus,
+input[type="month"]:focus,
+input[type="time"]:focus,
+input[type="week"]:focus,
+input[type="number"]:focus,
+input[type="email"]:focus,
+input[type="url"]:focus,
+input[type="search"]:focus,
+input[type="tel"]:focus,
+input[type="color"]:focus,
+.inputbox,
+.form-control {
+  box-shadow: none;
+  border-color: inherit;
+}
+
+// INPUT ADDON
+// ------------------
+.input-group-addon {
+  text-shadow: none;
+  color: darken(@form-addon-background-color, 40%);
+  border-radius: @form-input-border-radius;
+  border: 1px solid @form-addon-border-color;
+  background-color: @form-addon-background-color;
+}
+
+// RS FORMS BLOCK
+// ------------------
+form.xhtml_block {
+  h1 {
+    margin: 0 0 10px;
+  }
+  h2 {
+    margin-bottom: 0;
+  }
+  button,
+  input[type="reset"],
+  input[type="submit"] {
+    cursor: pointer;
+    margin-bottom: 0;
+    text-align: center;
+    white-space: nowrap;
+    display: inline-block;
+    vertical-align: middle;
+    background-image: none;
+    font-weight: @btn-font-weight;
+    border: 1px solid transparent;
+    .button-size(@padding-base-vertical; @padding-base-horizontal; @font-size-base; @line-height-base; @border-radius-base);
+    .user-select(none);
+    &,
+    &:active,
+    &.active {
+      &:focus,
+      &.focus {
+        .tab-focus();
+      }
+    }
+    &:hover,
+    &:focus,
+    &.focus {
+      color: @btn-default-color;
+      text-decoration: none;
+    }
+    &:active,
+    &.active {
+      outline: 0;
+      background-image: none;
+      .box-shadow(inset 0 3px 5px rgba(0,0,0,.125));
+    }
+
+    &.disabled,
+    &[disabled],
+    fieldset[disabled] & {
+      .opacity(.65);
+      .box-shadow(none);
+    }
+  }
+  input[type="submit"],
+  button[type="submit"] {
+    width: 45%;
+    float: left;
+    .button-variant(@btn-success-color; @btn-success-bg; @btn-success-border);
+  }
+  input[type="reset"],
+  button[type="reset"] {
+    width: 45%;
+    float: right;
+    .button-variant(@btn-danger-color; @btn-danger-bg; @btn-danger-border);
+  }
+  textarea {
+    resize: none;
+    height: 100px;
+  }
+  .formBody {
+    width: 100%;
+  }
+  .formCaption,
+  .formCaption1,
+  .formCaption2 {
+    color: @form-label-font-color;
+    font-size: @form-label-font-size;
+    font-family: @form-label-font-family;
+    font-weight: @form-label-font-weight;
+  }
+  .addon-image {
+    color: #000000;
+    padding: 0 1px;
+    border-radius: 0;
+    img {
+      height: @input-height-base - 2;
+    }
+  }
+  .addon-refresh {
+    a {
+      color: #000000;
+      display: block;
+      padding: 6px 12px;
+    }
+    padding: 0;
+    border-radius: 0;
+  }
+  .control-group {
+    margin-bottom: 0;
+  }
+  margin-bottom: @grid-gutter-width;
+}
+
+// RS FORMS INLINE
+// ------------------
+form.xhtml_inline {
+}
+
+
+// SEARCH FORM
+// ------------------
+.form-search {
+  input {
+    height: 23px;
+    padding: 2px 2px;
+    border-right: none;
+    text-transform: lowercase;
+    font-size: @sidebar-form-input-font-size;
+  }
+  .input-group-addon {
+    padding: 0px;
+    border-left: none;
+  }
+  button {
+    width: 17px;
+    height: 21px;
+    padding: 0 0;
+    border-style: none;
+    border-radius: 0 0 0 0;
+    background-color: transparent;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-image: url("@{t3-image-path}/submit-triangle.gif");
+  }
+}
+
+#search-form .word .form-group {
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+// LOGIN FORM
+// ------------------
+#login-form {
+  ul {
+    //padding: 0 10px;
+    //font-size: 12px;
+  }
+  .form-group {
+    margin-bottom: 15px;
+  }
+  .input-group-addon {
+    i {
+      width: 10px;
+      height: 10px;
+    }
+    height: 23px;
+    padding: 3px 6px;
+    text-align: center;
+  }
+  input[type="text"],
+  input[type="password"] {
+    width: 100%;
+    height: 23px;
+    padding: 2px 2px;
+    text-transform: lowercase;
+    font-size: @sidebar-form-input-font-size;
+  }
+  button.btn, input.btn[type="submit"] {
+    width: 100%;
+    text-transform: uppercase;
+  }
+}

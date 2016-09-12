@@ -1,0 +1,67 @@
+// JCALPRO EVENTS
+// ------------------
+.jcalpro_events {
+  padding: 0 10px;
+  ul.jcalpro_events {
+    margin: 0 -7px;
+    padding: 0 0 0 0;
+    list-style: none;
+    line-height: 0.9em;
+    li {
+      line-height: 1.2em;
+      padding: 0 0 0 13px;
+      margin-bottom: 10px;
+      background-position: 0 -2px;
+      background-repeat: no-repeat;
+      background-image:  url("../@{t3-image-path}/bullet.png");
+    }
+    .jcalpro_no_events {
+      background-image: none;
+    }
+    .jcalpro_no_events,
+    .jcalpro_events_link {
+      a {
+        &:link, &:active, &:visited {
+          text-decoration: none;
+          color: @jcalpro-events-link-font-color;
+          font-size: @jcalpro-events-link-font-size;
+          font-style: @jcalpro-events-link-font-style;
+          font-weight: @jcalpro-events-link-font-weight;
+          font-family: @jcalpro-events-link-font-family;
+        }
+        &:focus, &:hover {
+          text-decoration: underline;
+        }
+      }
+    }
+    .jcalpro_events_date {
+      color: @jcalpro-events-date-font-color;
+      font-size: @jcalpro-events-date-font-size;
+      font-style: @jcalpro-events-date-font-style;
+      font-weight: @jcalpro-events-date-font-weight;
+      font-family: @jcalpro-events-date-font-family;
+    }
+    .month-separator {
+      margin: 0 14px 10px;
+      background-image: none;
+      color: @jcalpro-events-month-font-color;
+      font-size: @jcalpro-events-month-font-size;
+      font-style: @jcalpro-events-month-font-style;
+      text-align: @jcalpro-events-month-text-align;
+      font-weight: @jcalpro-events-month-font-weight;
+      border-top: 1px solid @jcalpro-events-month-border-color;
+      border-bottom: 1px solid @jcalpro-events-month-border-color;
+    }
+  }
+}
+
+
+// JCALPRO SEARCH
+// ------------------
+.jcl_component {
+  .jcl_search {
+    table {
+      width: 100% !important;
+    }
+  }
+}

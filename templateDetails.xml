@@ -52,8 +52,6 @@
 	</languages>
 
 	<positions>
-		<position>languageswitcherload</position>
-		<position>head-search</position>
 		<position>mainnav</position>
 		<position>navhelper</position>
 		<position>breadcrumbs</position>

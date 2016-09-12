@@ -1,0 +1,138 @@
+// ---------------------------------------------------------
+// CONTENT
+// ---------------------------------------------------------
+.t3-content,
+.t3-mainbody {
+  padding-top: 0 ;
+  padding-bottom: 0;
+}
+
+// TOP DIVIDER
+// ------------------
+.t3-mainbody {
+  hr.header-divider {
+    height: 1px;
+    margin: 5px 0;
+    border-top-width: 1px;
+    border-top-style: solid;
+    border-top-color: @content-border-color;
+  }
+}
+
+// SIDEBAR DIVIDERS
+// ------------------
+@media (min-width: @screen-md-min) {
+  .t3-content {
+    .t3-wrapper {
+      padding: 0 5px;
+      border-left-width: 1px;
+      border-right-width: 1px;
+      border-left-style: solid;
+      border-right-style: solid;
+      border-left-color: @content-border-color;
+      border-right-color: @content-border-color;
+    }
+  }
+  .t3-mainbody {
+    hr.header-divider {
+      margin: 5px 5px 5px 0;
+    }
+  }
+}
+
+
+// ---------------------------------------------------------
+// SIDEBARS
+// ---------------------------------------------------------
+
+// PADDING
+// ------------------
+.t3-sidebar {
+  padding-top: 0;
+  padding-bottom: 0;
+}
+
+// HEIGHT AND MARGIN
+// ------------------
+@media (min-width: @screen-sm-min) {
+  .t3-header {
+    overflow: hidden;
+  }
+  .header-right {
+
+  }
+  .t3-sidebar-1 {
+    .t3-module {
+      padding-left: 5px;
+    }
+  }
+  .t3-sidebar-2 {
+    margin-top: -34px;
+  }
+}
+
+@screen-us:       320px;
+@screen-us-min:   @screen-us;
+
+@container-xs:    (478 + @grid-gutter-width);
+
+.container {
+  .container-fixed();
+
+  @media (min-width: @screen-xs-min) {
+    width: @container-xs;
+  }
+  @media (min-width: @screen-sm-min) {
+    width: @container-sm;
+  }
+  @media (min-width: @screen-md-min) {
+    width: @container-md;
+  }
+  @media (min-width: @screen-lg-min) {
+    width: @container-lg;
+  }
+}
+
+// Ultra small grid
+//
+// Columns, offsets, pushes, and pulls for extra small devices like
+// smartphones.
+
+.make-grid(us);
+
+
+// Extra small grid
+//
+// Columns, offsets, pushes, and pulls for extra small devices like
+// smartphones.
+
+@media (min-width: @screen-xs-min) {
+  .make-grid(xs);
+}
+
+// Small grid
+//
+// Columns, offsets, pushes, and pulls for the small device range, from phones
+// to tablets.
+
+@media (min-width: @screen-sm-min) {
+  .make-grid(sm);
+}
+
+
+// Medium grid
+//
+// Columns, offsets, pushes, and pulls for the desktop device range.
+
+@media (min-width: @screen-md-min) {
+  .make-grid(md);
+}
+
+
+// Large grid
+//
+// Columns, offsets, pushes, and pulls for the large desktop device range.
+
+@media (min-width: @screen-lg-min) {
+  .make-grid(lg);
+}

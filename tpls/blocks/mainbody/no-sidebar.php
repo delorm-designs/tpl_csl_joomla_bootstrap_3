@@ -13,14 +13,23 @@ defined('_JEXEC') or die;
 ?>
 
 <div id="t3-mainbody" class="container t3-mainbody">
-	<div class="row">
+    <div class="row">
+        <div class="col-xs-12"><hr class="header-divider"></div>
+    </div>
+
+    <div class="row">
 
 		<!-- MAIN CONTENT -->
 		<div id="t3-content" class="t3-content col-xs-12">
-			<?php if($this->hasMessage()) : ?>
-			<jdoc:include type="message" />
-			<?php endif ?>
-			<jdoc:include type="component" />
+            <div class="t3-wrapper">
+                <div class="slider <?php $this->_c('slider') ?>">
+                    <jdoc:include type="modules" name="<?php $this->_p('slider') ?>" style="T3Xhtml" />
+                </div>
+                <?php if($this->hasMessage()) : ?>
+                <jdoc:include type="message" />
+                <?php endif ?>
+                <jdoc:include type="component" />
+            </div>
 		</div>
 		<!-- //MAIN CONTENT -->
 

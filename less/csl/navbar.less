@@ -1,0 +1,119 @@
+// ---------------------------------------------------------
+// NAVBAR
+// ---------------------------------------------------------
+.navbar {
+  border: none;
+}
+
+.t3-mainnav {
+  background-repeat: no-repeat;
+  background-position: center top;
+  background-image: url("@{t3-image-path}/bg.png");
+  a {
+    text-transform: uppercase;
+    font-size: @navbar-default-font-size;
+    font-weight: @navbar-default-font-weight;
+    font-family: @navbar-default-font-family;
+    line-height: @navbar-default-font-size + 4 !important;
+  }
+  .t3-navbar {
+    .navbar-nav {
+      float: right;
+      border: none;
+      height: @navbar-height;
+      > li {
+        padding-top: @navbar-default-font-size / 2;
+        padding-bottom: @navbar-default-font-size / 2;
+      }
+      > li > a {
+        padding: 0 12px;
+        border-left-width: 1px;
+        border-left-style: solid;
+        border-left-color: @navbar-default-link-active-color;
+      }
+      > li:first-child > a {
+        border-left: none;
+      }
+      > li:last-child > a {
+        padding-right: 0;
+      }
+    }
+    .dropdown-menu > li > a {
+      font-weight: @navbar-default-font-weight;
+    }
+    .dropdown-menu > li:hover > a,
+    .dropdown-menu > li.open > a:hover {
+      color: @dropdown-link-hover-color;
+      background-color: @dropdown-link-hover-bg;
+    }
+    .make-md-column(5);
+    .make-lg-column(6);
+    .make-md-column-push(4);
+    .make-lg-column-push(3);
+  }
+  .container,
+  .navbar-header {
+    z-index: 1000;
+    position: relative;
+    background-repeat: no-repeat;
+    background-position: left top;
+    background-image: url("@{t3-image-path}/welcome-to.png");
+  }
+  .navbar-toggle {
+    margin: 0;
+    padding: 0;
+    color: @white;
+    border-style: none;
+    border-radius: 0 0;
+    width: @navbar-height;
+    height: @navbar-height;
+    line-height: @navbar-height;
+  }
+}
+
+
+// DROPDOWN
+// ------------------
+.navbar-nav {
+  @media (max-width: @grid-float-breakpoint-max) {
+    .caret {
+      display: none;
+    }
+    .dropdown-menu > li > a {
+      font-weight: @navbar-default-font-weight;
+    }
+    .dropdown-menu > li:hover > a,
+    .dropdown-menu > li.open > a:hover {
+      color: @dropdown-link-hover-color;
+      background-color: transparent;
+    }
+    .dropdown-menu {
+      position: static;
+      float: none;
+      width: auto;
+      display: block;
+      margin-top: 0;
+      background-color: transparent;
+      border: 0;
+      box-shadow: none;
+      > li > a,
+      .dropdown-header {
+        padding: 5px 15px 5px 25px;
+      }
+      > li > a {
+        line-height: @line-height-computed;
+        &:hover,
+        &:focus {
+          background-image: none;
+        }
+      }
+    }
+    .dropdown-submenu > a:after {
+      border: none;
+    }
+  }
+}
+
+.dropdown-menu {
+  top: 28px;
+}

@@ -1,0 +1,91 @@
+// ---------------------------------------------------------
+// TYPOGRAPHY
+// ---------------------------------------------------------
+h1, h2, h3, h4, h5, h6 {
+  line-height: 1.2;
+  margin: 0 0 10px;
+  color: @headings-color;
+  font-family: @headings-font-family;
+  font-weight: @headings-font-weight;
+  //text-rendering: optimizelegibility; // Fix the character spacing for headings
+}
+
+h1 {
+  margin: 0 0 20px;
+  letter-spacing: 1px;
+  font-size: @font-size-base + 10px;
+  small {
+    font-size: @font-size-base + 8px;
+  }
+}
+
+/* Extra small devices (phones, less than 768px) */
+/* No media query since this is the default in Bootstrap */
+
+/* Small devices (tablets, 768px and up) */
+@media (min-width: @screen-sm-min) {
+  h2 {
+    //font-size: @font-size-base + 1px;
+  }
+}
+
+/* Medium devices (desktops, 992px and up) */
+@media (min-width: @screen-md-min) {
+  h2 {
+    //font-size: @font-size-base + 1px;
+  }
+}
+
+/* Large devices (large desktops, 1200px and up) */
+@media (min-width: @screen-lg-min) {
+  h2 {
+    //font-size: @font-size-base + 2px;
+  }
+}
+
+
+h2 {
+  letter-spacing: 1px;
+  font-size: @font-size-base + 2px;
+  small {
+    font-size: @font-size-base - 0px;
+  }
+}
+
+h3 {
+  letter-spacing: 1px;
+  font-size: @font-size-base - 0px;
+  small {
+    font-size: @font-size-base - 2px;
+  }
+}
+
+h4 {
+  color: #A23B2F;
+  font-weight: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  font-size: @font-size-base + 2px;
+  small {
+    font-size: @font-size-base - 0px;
+  }
+}
+
+h5 {
+  color: #A23B2F;
+  font-weight: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  font-size: @font-size-base + 0px;
+  small {
+    font-size: @font-size-base - 2px;
+  }
+}
+
+h6 {
+  color: #A23B2F;
+  font-weight: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  font-size: @font-size-base - 1px;
+}

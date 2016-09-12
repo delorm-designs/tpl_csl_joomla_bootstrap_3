@@ -1,0 +1,211 @@
+// ---------------------------------------------------------
+// MODULES
+// ---------------------------------------------------------
+.t3-module {
+  .module-title {
+    margin: 0 0 7px;
+    text-align: center;
+    white-space: nowrap;
+    text-transform: uppercase;
+    color: @module-title-font-color;
+    background: @module-title-bg-color;
+    font-size: @module-title-font-size;
+    font-weight: @module-title-font-weight;
+    font-family: @module-title-font-family;
+    line-height: @module-title-font-size + 8px;
+  }
+  margin-bottom: @grid-gutter-width;
+}
+
+// LINK BUTTON
+// ------------------
+a.link-button {
+  right: 0;
+  bottom: 0;
+  float: right;
+  cursor: pointer;
+  position: absolute;
+  text-align: center;
+  text-decoration: none;
+  text-transform: uppercase;
+  width: @link-button-width;
+  color: @link-button-text-color;
+  font-size: @link-button-font-size;
+  min-height: @link-button-min-height;
+  font-weight: @link-button-font-weight;
+  line-height: @link-button-line-height;
+  font-family: @link-button-font-family;
+  background-color: @link-button-base-color;
+  border: 1px solid @link-button-border-color;
+}
+a.link-button:focus,
+a.link-button:hover {
+  color: @link-button-link-color;
+  background-color: @link-button-hover-color;
+}
+
+// STANDARD MENU MODULE
+// --------------------
+.t3-sidebar,
+.t3-off-canvas {
+  .t3-module {
+    .module-ct {
+      > ul.nav {
+        a:link,
+        a:active,
+        a:visited {
+          display: block;
+          padding: 2px 6px;
+          border-radius: 0;
+          text-decoration: none;
+          text-transform: uppercase;
+          color: @accordion-font-color;
+          font-size: @accordion-font-size;
+          font-weight: @accordion-font-weight;
+          font-family: @accordion-font-family;
+        }
+        li {
+          margin: 0 0 3px;
+          min-height: 20px;
+        }
+        margin: 0px;
+        padding: 0px;
+        list-style: none;
+        > li {
+          > a:link,
+          > a:active,
+          > a:visited {
+            background-color: @accordion-collapsed-base-color;
+          }
+          > a:hover  {
+            text-decoration: underline;
+            background-color: @accordion-collapsed-hover-color;
+          }
+          > a.active {
+            background-color: @accordion-collapsed-active-color;
+          }
+          > ul {
+            > li {
+              margin: 3px 0 0;
+              > a:link,
+              > a:active,
+              > a:visited {
+                background-color: @accordion-expanded-base-color;
+              }
+              > a:hover  {
+                background-color: @accordion-expanded-hover-color;
+              }
+              > a.active {
+                background-color: @accordion-expanded-active-color;
+              }
+            }
+            > li:last-child {
+              margin: 0;
+            }
+            margin: 0px;
+            padding: 0px;
+            list-style: none;
+          }
+        }
+        .caret {
+          display: none;
+        }
+      }
+    }
+  }
+}
+
+// ACCORDION MENU MODULE
+// ---------------------
+.t3-sidebar,
+.t3-off-canvas {
+  .t3-module {
+    .module-ct {
+      .accordion {
+        a:link,
+        a:active,
+        a:visited {
+          display: block;
+          padding: 2px 6px;
+          text-decoration: none;
+          text-transform: uppercase;
+          color: @accordion-font-color;
+          font-size: @accordion-font-size;
+          font-weight: @accordion-font-weight;
+          font-family: @accordion-font-family;
+        }
+        ul {
+          margin: 0px;
+          padding: 0px;
+          list-style: none;
+          overflow: hidden;
+        }
+        li {
+          margin: 0 0 3px;
+          min-height: 20px;
+        }
+        .accordion-body {
+          margin: 3px 0px 0px;
+        }
+        .accordion-heading {
+          a:link,
+          a:active,
+          a:visited {
+            background-color: @accordion-collapsed-base-color;
+          }
+          a:hover  {
+            text-decoration: underline;
+            background-color: @accordion-collapsed-hover-color;
+          }
+          a.active {
+            background-color: @accordion-collapsed-active-color;
+          }
+        }
+        .accordion-inner {
+          a:link,
+          a:active,
+          a:visited {
+            background-color: @accordion-expanded-base-color;
+          }
+          a:hover  {
+            background-color: @accordion-expanded-hover-color;
+          }
+          a.active {
+            background-color: @accordion-expanded-active-color;
+          }
+          li:last-child {
+            margin: 0;
+          }
+        }
+      }
+    }
+  }
+}
+
+// TEMPLATE SELECTOR
+// ------------------
+.tplselector {
+  img {
+    width: 100%;
+  }
+  select {
+    height: 23px;
+    padding: 2px 2px;
+    font-size: @sidebar-form-input-font-size;
+  }
+  button {
+    width: 100%;
+  }
+  #tplbtns {
+    margin-top: 5px;
+  }
+  #tplthumb {
+    margin-bottom: 5px;
+  }
+  .button-left {
+    padding-left: 0;
+  }
+  .button-right {
+    padding-right: 0;
+  }
+}

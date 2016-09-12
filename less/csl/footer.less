@@ -1,0 +1,120 @@
+// ---------------------------------------------------------
+// FOOTER
+// ---------------------------------------------------------
+.t3-footer {
+  .clearfix();
+  color: @black;
+  padding: 0 5px;
+  font-size: 13px;
+  border-top: none;
+  background-color: transparent;
+
+  // small
+  small {
+    color: @black;
+    font-size: 11px;
+  }
+
+  // links
+  a {
+    &:link, &:visited, &:active {
+      color: @black;
+      text-decoration: underline;
+    }
+    &:hover, &:active, &:focus {
+      color: lighten(@black,50%);
+    }
+  }
+
+  // paragraph
+  p[style],
+  span[style] {
+    color: @black !important;
+    font-size: 13px !important;
+    font-family: @font-family-serif !important;
+    small {
+      font-size: 11px !important;
+    }
+  }
+
+  // container
+  .container {
+    border-top: 1px solid @content-border-color;
+    .t3-module {
+      margin-bottom: 0px;
+    }
+
+    p {
+      margin: 0 0 15px;
+      line-height: normal;
+      letter-spacing: normal;
+    }
+  }
+  margin-top: 5px;
+}
+
+// Copyright
+// ---------
+.t3-copyright {
+  .clearfix();
+  border-top: none;
+  padding-top: 10px;
+  padding-bottom: 0px;
+}
+
+.copyright {
+  float: left;
+  padding-top: 10px;
+  margin-bottom: 0;
+}
+
+
+
+// Foot Nav
+// --------
+.t3-footnav {
+  .clearfix();
+
+  padding: 0;
+
+  // Footnav Modules
+  .t3-module {
+    color: @t3-footer-module-text-color;
+    margin-top: @line-height-computed / 2;
+    margin-bottom: @line-height-computed / 2;
+    background-color: transparent;
+    .module-title {
+      color: @t3-footer-module-title-color;
+      font-size: @font-size-large;
+      margin-bottom: @line-height-computed / 2;
+    }
+
+    ul {
+      list-style: none;
+      margin-left: 0;
+      margin-bottom: 0;
+      padding-left: 0;
+
+      > li {
+        line-height: 24px;
+        // links
+        > a {
+          color: @t3-footer-module-text-color;
+          // Link States
+          &:hover, &:active, &:focus {
+            color: @t3-footer-module-text-color;
+          }
+        }
+      }
+    }
+  }
+}
+
+// Copyright
+// ---------
+.t3-copyright {
+  .clearfix();
+}
+
+.copyright {
+}

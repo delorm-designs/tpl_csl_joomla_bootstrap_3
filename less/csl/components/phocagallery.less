@@ -1,0 +1,93 @@
+// PHOCA Gallery
+// ------------------
+#phocagallery {
+  .pg-center {
+    text-align: center;
+  }
+  table tr td div.pg-imgbg,
+  table tr td div.pg-imgbg a,
+  table tr td div.pg-imgbg a img {
+    margin: 0 auto;
+    padding: 0;
+    text-align: center;
+  }
+}
+#phocagallery.pg-categories-view {
+  table {
+    width: inherit;
+  }
+  th, td {
+    .small {
+      font-size: 100%;
+    }
+    padding: 20px;
+    vertical-align: middle;
+  }
+  td, tr td {
+    border-top: none;
+  }
+  margin: 0 12px;
+}
+
+#phocagallery.pg-category-view {
+  .pg-image {
+    width: 100%;
+  }
+  .pg-cv-name {
+    clear: both;
+    text-align: center;
+  }
+  .pg-cv-box:hover {
+    background: #f5f5f5;
+    border: 1px solid #0066cc;
+  }
+  .pg-box1 {
+    display: table;
+    text-align: center;
+  }
+  .pg-box2 {
+    display: table-cell;
+    text-align: center;
+    vertical-align: middle;
+  }
+  .pg-box3 {
+    display: inline-block;
+  }
+  .pg-cv-box {
+    width: 25%;
+    margin: 0;
+    float: left;
+    padding: 10px;
+    height: inherit;
+    box-shadow: none;
+    border-radius: 0;
+    border: 1px solid #fff;
+  }
+  .pg-cv-box-img {
+    margin: 0 auto;
+    padding: 5px 5px;
+    border-radius: 2px;
+    box-shadow: 1px 1px 2px 1px rgba(120, 120, 120, 0.5), 0 0 7px 7px rgba(240, 240, 240, 0.2) inset;
+  }
+  .pg-icon-detail {
+    margin: -20px 0 0;
+  }
+  .pg-msnr-container {
+    width: 95%;
+    margin: 0 auto;
+    text-align: center;
+  }
+  width: 100%;
+}
+
+#phocagallery.pg-detail-view {
+  td, tr td {
+    border-top: none;
+  }
+  td:first-child {
+    text-align: left;
+  }
+  td:last-child {
+    text-align: right;
+  }
+}

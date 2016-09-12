@@ -29,42 +29,38 @@ if ($headright = $this->countModules('head-search or languageswitcherload')) {
 <header id="t3-header" class="container t3-header">
 	<div class="row">
 
-		<!-- LOGO -->
-		<div class="col-xs-12 <?php echo $logosize ?> logo">
-			<div class="logo-<?php echo $logotype, ($logoimgsm ? ' logo-control' : '') ?>">
-				<a href="<?php echo JUri::base() ?>" title="<?php echo strip_tags($sitename) ?>">
-					<?php if($logotype == 'image'): ?>
-						<img class="logo-img" src="<?php echo JUri::base(true) . '/' . $logoimage ?>" alt="<?php echo strip_tags($sitename) ?>" />
-					<?php endif ?>
-					<?php if($logoimgsm) : ?>
-						<img class="logo-img-sm" src="<?php echo JUri::base(true) . '/' . $logoimgsm ?>" alt="<?php echo strip_tags($sitename) ?>" />
-					<?php endif ?>
-					<span><?php echo $sitename ?></span>
-				</a>
-				<small class="site-slogan"><?php echo $slogan ?></small>
-			</div>
-		</div>
-		<!-- //LOGO -->
+        <!-- LOGO -->
+        <div class="col-us-12 col-xs-6 col-sm-6 col-md-5 col-lg-4">
+            <div class="logo-<?php echo $logotype, ($logoimgsm ? ' logo-control' : '') ?>">
+                <a href="<?php echo JURI::base(true) ?>" title="<?php echo strip_tags($sitename) ?>">
+                    <?php if($logotype == 'image'): ?>
+                        <img class="logo-img img-responsive" src="<?php echo JURI::base(true) . '/' . $logoimage ?>" alt="<?php echo strip_tags($sitename) ?>" />
+                    <?php endif ?>
+                    <?php if($logoimgsm) : ?>
+                        <img class="logo-img-sm" src="<?php echo JURI::base(true) . '/' . $logoimgsm ?>" alt="<?php echo strip_tags($sitename) ?>" />
+                    <?php endif ?>
+                    <span><?php echo $sitename ?></span>
+                </a>
+                <small class="site-slogan"><?php echo $slogan ?></small>
+            </div>
+        </div>
+        <!-- //LOGO -->
 
-		<?php if ($headright): ?>
-			<div class="col-xs-12 col-sm-4">
-				<?php if ($this->countModules('head-search')) : ?>
-					<!-- HEAD SEARCH -->
-					<div class="head-search <?php $this->_c('head-search') ?>">
-						<jdoc:include type="modules" name="<?php $this->_p('head-search') ?>" style="raw" />
-					</div>
-					<!-- //HEAD SEARCH -->
-				<?php endif ?>
+        <div class="col-us-12 col-xs-6 col-sm-6 col-md-4 col-lg-5">
+            <?php if ($this->countModules('header-1')) : ?>
+                <div class="header-left <?php $this->_c('header-1') ?>">
+                    <jdoc:include type="modules" name="<?php $this->_p('header-1') ?>" style="raw" />
+                </div>
+            <?php endif ?>
+        </div>
 
-				<?php if ($this->countModules('languageswitcherload')) : ?>
-					<!-- LANGUAGE SWITCHER -->
-					<div class="languageswitcherload">
-						<jdoc:include type="modules" name="<?php $this->_p('languageswitcherload') ?>" style="raw" />
-					</div>
-					<!-- //LANGUAGE SWITCHER -->
-				<?php endif ?>
-			</div>
-		<?php endif ?>
+        <div class="col-md-3 hidden-sm hidden-xs">
+            <?php if ($this->countModules('header-2')) : ?>
+                <div class="header-right  <?php $this->_c('header-2') ?>">
+                    <jdoc:include type="modules" name="<?php $this->_p('header-2') ?>" style="raw" />
+                </div>
+            <?php endif ?>
+        </div>
 
 	</div>
 </header>
