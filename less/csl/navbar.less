@@ -6,9 +6,6 @@
 }
 
 .t3-mainnav {
-  background-repeat: no-repeat;
-  background-position: center top;
-  background-image: url("@{t3-image-path}/bg.png");
   a {
     text-transform: uppercase;
     font-size: @navbar-default-font-size;
@@ -46,18 +43,12 @@
       color: @dropdown-link-hover-color;
       background-color: @dropdown-link-hover-bg;
     }
-    .make-md-column(5);
-    .make-lg-column(6);
-    .make-md-column-push(4);
-    .make-lg-column-push(3);
+    .make-md-column(7);
+    .make-md-column-push(2);
   }
-  .container,
-  .navbar-header {
+  .container {
     z-index: 1000;
     position: relative;
-    background-repeat: no-repeat;
-    background-position: left top;
-    background-image: url("@{t3-image-path}/welcome-to.png");
   }
   .navbar-toggle {
     margin: 0;
@@ -70,7 +61,6 @@
     line-height: @navbar-height;
   }
 }
-
 
 // DROPDOWN
 // ------------------

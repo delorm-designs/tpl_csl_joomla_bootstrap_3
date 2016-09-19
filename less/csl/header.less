@@ -3,11 +3,6 @@
 // ---------------------------------------------------------
 .t3-header {
   .header-left {
-    .custom_link{
-      right: 5px;
-      bottom: 0px;
-      position: absolute;
-    }
     color: @header-font-color !important;
     font-size: @header-font-size !important;
     line-height: @header-line-height;
@@ -17,19 +12,12 @@
     }
   }
   .header-right {
-    table {
-      top: 50%;
-      width: 100%;
-      position: absolute;
-      transform: translateY(-50%);
-    }
     th, td {
       text-align: center;
     }
     td, tr td {
       border-top: none;
     }
-    height: @header-right-height;
   }
   padding-top: 0;
   padding-bottom: 0;
@@ -41,5 +29,7 @@
   img {
     width: 100%;
   }
+  width: 100%;
   padding: 5px 0;
+  text-align: center;
 }

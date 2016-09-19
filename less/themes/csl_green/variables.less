@@ -1,92 +1,225 @@
-/** 
+/**
  *------------------------------------------------------------------------------
- * @package       T3 Framework for Joomla!
+ * @package       T3 CSL Template
  *------------------------------------------------------------------------------
- * @copyright     Copyright (C) 2004-2013 JoomlArt.com. All Rights Reserved.
- * @license       GNU General Public License version 2 or later; see LICENSE.txt
- * @authors       JoomlArt, JoomlaBamboo, (contribute to this project at github 
- *                & Google group to become co-author)
- * @Google group: https://groups.google.com/forum/#!forum/t3fw
- * @Link:         http://t3-framework.org 
+ * @Link:         http://t3-framework.org
  *------------------------------------------------------------------------------
  */
 
-// Global values
+//
+// Variables
 // --------------------------------------------------
-@T3ImagePath:      "../../../images/themes/csl_green";
 
-// T3 Main colors
+// Core
 // -------------------------
-@T3primaryColor:        #2D679A;
-@T3secondaryColor:      #546A16;
+@text-color:                         @black;
+@body-background:                    @white;
+@content-border-color:               #A0CAE3;
 
 
-// Scaffolding
+// Image
+// --------------------------------------------------
+@t3-image-path:                      "../images/themes/csl_green";
+
+
+// Header
 // -------------------------
-@bodyBackground:        @white;
-@textColor:             @black;
 
-// Typography
-// -------------------------
-@headingsColor:         #004F88;
+// Header Line Sizes
+@header-text-lines:                  6;
+@header-total-lines:                 9;
 
+// Header Font Style
+@header-font-size:                   14px;
+@header-font-color:                  #265782;
+@header-font-style:                  normal;
+@header-font-weight:                 normal;
+@header-font-margin:                 6px;
+@header-font-family:                 @font-family-sans-serif;
 
-// Dropdowns
-// -------------------------
-@dropdownBorder:                rgba(0,0,0,.2);
-@dropdownBackground:            @white;
-@dropdownDividerTop:            #2D679A;
-@dropdownDividerSide:           #2D679A;
-@dropdownDividerBottom:         @white;
-
-@dropdownFontColor:             @white;
-@dropdownFontHoverColor:        #2D679A;
-@dropdownFontActiveColor:       #2D679A;
-
-
-// Accordions
-// -------------------------
-@accordionFontColor:            @white;
-@accordionBackgroundColor:      @white;
-
-@accordionCollapsedBaseColor:   #546A16;
-@accordionCollapsedHoverColor:  #2D679A;
-@accordionCollapsedActiveColor: #2D679A;
-
-@accordionExpandedBaseColor:    #EFBDAA;
-@accordionExpandedHoverColor:   #2D679A;
-@accordionExpandedActiveColor:  #2D679A;
-
-
-// Link Button
-// -------------------------
-@linkButtonTextColor:           @white;
-@linkButtonLinkColor:           #546A16;
-@linkButtonBaseColor:           #546A16;
-@linkButtonHoverColor:          #A6B281;
-@linkButtonBorderColor:         #546A16;
+// Header Calculated Heights
+@header-link-lines:                  @header-total-lines - @header-text-lines;
+@header-line-height:                 @header-font-size   + @header-font-margin;
+@header-right-height:                @header-line-height * @header-text-lines;
+@header-fixed-height:                @header-line-height * @header-total-lines;
 
 
 // Forms
 // -------------------------
-@formLabelFontColor:            #546A16;
-@formInputFontColor:            #546A16;
-@formInputBorderColor:          #546A16;
-@formInputBackgroundColor:      #F8FCFF;
-@formAddOnBackgroundColor:      #B0C5D8;
+
+// Form label font
+@form-label-font-size:               16px;
+@form-label-font-color:              #00548A;
+@form-label-font-style:              normal;
+@form-label-font-weight:             normal;
+@form-label-font-family:             @font-family-serif;
+
+// Form input font
+@form-input-font-size:               16px;
+@form-input-font-color:              #546A16;
+@form-input-font-style:              normal;
+@form-input-font-weight:             bold;
+@form-input-font-family:             @font-family-sans-serif;
+
+// Form input border
+@form-input-border-color:            #546A16;
+@form-input-border-radius:           0 0 0 0;
+
+// Form addon border
+@form-addon-border-color:            #546A16;
+@form-addon-border-radius:           0 0 0 0;
+
+// Form input background
+@form-input-background-color:        #F5FBFD;
+
+// Form addon Background
+@form-addon-background-color:        #DDE3C9;
+
+// Sidebar form font size
+@sidebar-form-input-font-size:       12px;
+@sidebar-form-input-min-height:      20px;
 
 
-// Modules
+// Dropdowns
 // -------------------------
 
-@moduleColor:                 inherit;
-@moduleBackground:            transparent;
+@dropdown-bg:                        #A6B281;
+@dropdown-border:                    rgba(0,0,0,.15);
+@dropdown-fallback-border:           #CCC;
+@dropdown-divider-bg:                #E5E5E5;
 
-// Module Title
-@moduleTitleFontColor:        @white;
-@moduleTitleBackground:       #AF3F33;
+@dropdown-link-color:                @gray-dark;
+@dropdown-link-hover-color:          #2D679A;
+@dropdown-link-hover-bg:             darken(@dropdown-bg, 5%);
+
+@dropdown-link-active-color:         @component-active-color;
+@dropdown-link-active-bg:            @component-active-bg;
+
+@dropdown-link-disabled-color:       @gray-light;
+
+@dropdown-header-color:              @gray-light;
+
+@dropdown-caret-color:               #000;
 
 
-// Module Content
-@moduleContentFontColor:        @black;
-@moduleContentBackground:       inherit; // inherit from @moduleBackground
+// COMPONENT VARIABLES
+// --------------------------------------------------
+
+
+// Navbar
+// -------------------------
+
+// Basics of a navbar
+@navbar-height:                      28px;
+@navbar-margin-bottom:               @line-height-computed;
+@navbar-border-radius:               @border-radius-base;
+@navbar-padding-horizontal:          floor(@grid-gutter-width / 2);
+@navbar-padding-vertical:            ((@navbar-height - @line-height-computed) / 2);
+
+@navbar-default-color:               #777;
+@navbar-default-bg:                  #A6B281;
+@navbar-default-border:              darken(@navbar-default-bg, 6.5%);
+
+// Navbar links
+@navbar-default-link-color:          #FFF;
+@navbar-default-link-hover-color:    #2C6496;
+@navbar-default-link-hover-bg:       transparent;
+@navbar-default-link-active-color:   #2C6496;
+@navbar-default-link-active-bg:      transparent;
+@navbar-default-link-disabled-color: #CCC;
+@navbar-default-link-disabled-bg:    transparent;
+
+// Navbar fonts
+@navbar-default-font-size:           12px;
+@navbar-default-font-weight:         bold;
+@navbar-default-font-family:         @font-family-sans-serif;
+
+// Navbar brand label
+@navbar-default-brand-color:         @navbar-default-link-color;
+@navbar-default-brand-hover-color:   darken(@navbar-default-brand-color, 10%);
+@navbar-default-brand-hover-bg:      transparent;
+
+// Navbar toggle
+@navbar-default-toggle-hover-bg:     #2D679A;
+@navbar-default-toggle-icon-bar-bg:  #CCC;
+@navbar-default-toggle-border-color: #DDD;
+
+
+// MODULES
+// -------------------------
+
+// Title
+@module-title-height:                22px;
+@module-title-bg-color:              #AF3F33;
+@module-title-font-size:             14px;
+@module-title-font-color:            @white;
+@module-title-font-weight:           normal;
+@module-title-font-family:           @font-family-sans-serif;
+
+// Accordion
+@accordion-item-min-height:          24px;
+@accordion-background-color:         @white;
+
+@accordion-font-size:                14px;
+@accordion-font-color:               @white;
+@accordion-font-style:               normal;
+@accordion-font-weight:              normal;
+@accordion-font-family:              @font-family-sans-serif;
+
+@accordion-expanded-base-color:      #A6B281;
+@accordion-expanded-hover-color:     #2D679A;
+@accordion-expanded-active-color:    #2D679A;
+
+@accordion-collapsed-base-color:     #546A16;
+@accordion-collapsed-hover-color:    #2D679A;
+@accordion-collapsed-active-color:   #2D679A;
+
+// Link Button
+@link-button-width:                  165px;
+@link-button-font-size:              14px;
+@link-button-text-color:             @white;
+@link-button-link-color:             #2D679A;
+@link-button-base-color:             #2D679A;
+@link-button-hover-color:            #C9E3EE;
+@link-button-border-color:           #2D679A;
+@link-button-font-style:             normal;
+@link-button-font-weight:            normal;
+@link-button-min-height:             @header-font-size + 6;
+@link-button-line-height:            @header-font-size + 6;
+@link-button-font-family:            @font-family-sans-serif;
+
+// JCALPRO Calendar
+@jcalpro-events-link-font-size:      12px;
+@jcalpro-events-link-font-color:     @black;;
+@jcalpro-events-link-font-style:     normal;
+@jcalpro-events-link-font-weight:    bold;
+@jcalpro-events-link-font-family:    @font-family-sans-serif;
+
+@jcalpro-events-date-font-size:      12px;
+@jcalpro-events-date-font-color:     #C95245;
+@jcalpro-events-date-font-style:     normal;
+@jcalpro-events-date-font-weight:    bold;
+@jcalpro-events-date-font-family:    @font-family-sans-serif;
+
+@jcalpro-events-month-font-size:     12px;
+@jcalpro-events-month-font-color:    @black;
+@jcalpro-events-month-font-style:    italic;
+@jcalpro-events-month-font-weight:   bold;
+@jcalpro-events-month-font-family:   @font-family-sans-serif;
+
+@jcalpro-events-month-text-align:    center;
+@jcalpro-events-month-border-color:  #777777;
+
+// Sermon Speaker
+@ss-table-th-font-size:              16px;
+@ss-table-th-font-color:             #EEE;
+@ss-table-th-font-weight:            bold;
+@ss-table-th-font-family:            @font-family-sans-serif;
+
+@ss-table-td-font-size:              16px;
+@ss-table-td-font-color:             @black;
+@ss-table-td-font-weight:            normal;
+@ss-table-td-font-family:            @font-family-sans-serif;
+
+@ss-table-th-background-color:       @black;
+@ss-table-td-background-color:       transparent;
