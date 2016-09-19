@@ -1,8 +1,9 @@
 ##CSL Joomla! Mobile Responsive Bootstrap 3 Template
 
-#Change Log
+##Change Log
+All notable changes to this project will be documented in this file.
 
-##[3.0.0] (9/10/2016)
+##[3.0.0] - 20116-9-10
 
 **Revised file structure:**
 
@@ -12,7 +13,7 @@
     - Created csl folder for csl specific less files
 
 
-##[3.0.1] (9/18/2016)
+##[3.0.1] - 2016-9-18
 
 - Fixed double pop-up on calender links
 - Add ThemeMagic support for custom CSL LESS variables
