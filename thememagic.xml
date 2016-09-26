@@ -294,24 +294,24 @@
                 <option for="jcalpro-events-month-font-family" value="undefined">jcalpro-events-month-font-family-custom</option>
             </field>
 
-            <field type="spacer" name="event-link-font-styles" label="Event Link Font Styles" />
+            <field name="event-link-font-styles" type="spacer" class="t3tm-spacer" label="Event Link Font Styles" />
 
-            <field name="jcalpro-events-link-font-size" default="12px" type="text" class="t3tm-dimension" label="T3_TM_VARS_FONT_SIZE_LABEL" description="T3_TM_VARS_SCFD_GUTTER_DESC" />
+            <field name="jcalpro-events-link-font-size" default="12px" type="text" class="t3tm-dimension" label="T3_TM_VARS_FONT_SIZE_LABEL" description="T3_TM_VARS_FONT_SIZE_DESC" />
 
-            <field name="jcalpro-events-link-font-color" default="@black" type="color" class="t3tm-color" label="T3_TM_VARS_FONT_COLOR_LABEL" description="T3_VARS_FOOTER_BG_DESC" />
+            <field name="jcalpro-events-link-font-color" default="@black" type="color" class="t3tm-color" label="T3_TM_VARS_FONT_COLOR_LABEL" description="T3_TM_VARS_FONT_COLOR_DESC" />
 
             <field name="jcalpro-events-link-font-style" default="normal" type="list"
                    label="T3_TM_VARS_FONT_STYLE_LABEL"
                    description="T3_TM_VARS_FONT_STYLE_DESC" >
                 <option value="normal">JNO</option>
-                <option value="bold">JYES</option>
+                <option value="italic">JYES</option>
             </field>
 
             <field name="jcalpro-events-link-font-weight" default="bold" type="list"
                    label="T3_TM_VARS_FONT_WEIGHT_LABEL"
                    description="T3_TM_VARS_FONT_WEIGHT_DESC" >
                 <option value="normal">JNO</option>
-                <option value="italic">JYES</option>
+                <option value="bold">JYES</option>
             </field>
 
             <field name="jcalpro-events-link-font-family" type="list"
@@ -327,24 +327,24 @@
                    label="T3_TM_VARS_FONTFAMILY_CUSTOM_LABEL"
                    description="T3_TM_VARS_FONTFAMILY_CUSTOM_DESC" />
 
-            <field type="spacer" name="event-date-font-styles" label="Event Date Font Styles" />
+            <field name="event-date-font-styles" type="spacer" class="t3tm-spacer" label="Event Date Font Styles" />
 
-            <field name="jcalpro-events-date-font-size" default="12px" type="text" class="t3tm-dimension" label="T3_TM_VARS_FONT_SIZE_LABEL" description="T3_TM_VARS_SCFD_GUTTER_DESC" />
+            <field name="jcalpro-events-date-font-size" default="12px" type="text" class="t3tm-dimension" label="T3_TM_VARS_FONT_SIZE_LABEL" description="T3_TM_VARS_FONT_SIZE_DESC" />
 
-            <field name="jcalpro-events-date-font-color" default="@black" type="color" class="t3tm-color" label="T3_TM_VARS_FONT_COLOR_LABEL" description="T3_VARS_FOOTER_BG_DESC" />
+            <field name="jcalpro-events-date-font-color" default="@black" type="color" class="t3tm-color" label="T3_TM_VARS_FONT_COLOR_LABEL" description="T3_TM_VARS_FONT_COLOR_DESC" />
 
             <field name="jcalpro-events-date-font-style" default="normal" type="list"
                    label="T3_TM_VARS_FONT_STYLE_LABEL"
                    description="T3_TM_VARS_FONT_STYLE_DESC" >
                 <option value="normal">JNO</option>
-                <option value="bold">JYES</option>
+                <option value="italic">JYES</option>
             </field>
 
             <field name="jcalpro-events-date-font-weight" default="bold" type="list"
                    label="T3_TM_VARS_FONT_WEIGHT_LABEL"
                    description="T3_TM_VARS_FONT_WEIGHT_DESC" >
                 <option value="normal">JNO</option>
-                <option value="italic">JYES</option>
+                <option value="bold">JYES</option>
             </field>
 
             <field name="jcalpro-events-date-font-family" type="list"
@@ -360,31 +360,31 @@
                    label="T3_TM_VARS_FONTFAMILY_CUSTOM_LABEL"
                    description="T3_TM_VARS_FONTFAMILY_CUSTOM_DESC" />
 
-            <field type="spacer" name="event-month-font-styles" label="Event Month Font Styles" />
+            <field name="event-month-font-styles" type="spacer" class="t3tm-spacer" label="Event Month Font Styles" />
 
-            <field name="jcalpro-events-month-font-size" default="12px" type="text" class="t3tm-dimension" label="T3_TM_VARS_FONT_SIZE_LABEL" description="T3_TM_VARS_SCFD_GUTTER_DESC" />
+            <field name="jcalpro-events-month-font-size" default="12px" type="text" class="t3tm-dimension" label="T3_TM_VARS_FONT_SIZE_LABEL" description="T3_TM_VARS_FONT_SIZE_DESC" />
 
-            <field name="jcalpro-events-month-font-color" default="@black" type="color" class="t3tm-color" label="T3_TM_VARS_FONT_COLOR_LABEL" description="T3_VARS_FOOTER_BG_DESC" />
+            <field name="jcalpro-events-month-font-color" default="@black" type="color" class="t3tm-color" label="T3_TM_VARS_FONT_COLOR_LABEL" description="T3_TM_VARS_FONT_COLOR_DESC" />
 
             <field name="jcalpro-events-month-font-style" default="normal" type="list"
                    label="T3_TM_VARS_FONT_STYLE_LABEL"
                    description="T3_TM_VARS_FONT_STYLE_DESC" >
                 <option value="normal">JNO</option>
-                <option value="bold">JYES</option>
+                <option value="italic">JYES</option>
             </field>
 
             <field name="jcalpro-events-month-font-weight" default="bold" type="list"
                    label="T3_TM_VARS_FONT_WEIGHT_LABEL"
                    description="T3_TM_VARS_FONT_WEIGHT_DESC" >
                 <option value="normal">JNO</option>
-                <option value="italic">JYES</option>
+                <option value="bold">JYES</option>
             </field>
 
-            <field name="jcalpro-events-month-border-color" default="@black" type="color" class="t3tm-color" label="T3_TM_VARS_BORDER_COLOR_LABEL" description="T3_VARS_FOOTER_BG_DESC" />
+            <field name="jcalpro-events-month-border-color" default="@black" type="color" class="t3tm-color" label="T3_TM_VARS_BORDER_COLOR_LABEL" description="T3_TM_VARS_BORDER_COLOR_DESC" />
 
             <field name="jcalpro-events-month-text-align" default="center" type="list"
                    label="T3_TM_VARS_TEXT_ALIGN_LABEL"
-                   description="T3_TM_VARS_FONT_WEIGHT_DESC" >
+                   description="T3_TM_VARS_TEXT_ALIGN_DESC" >
                 <option value="left">Left</option>
                 <option value="center">Center</option>
                 <option value="right">Right</option>

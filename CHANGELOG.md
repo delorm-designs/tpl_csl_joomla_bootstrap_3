@@ -3,7 +3,7 @@
 ##Change Log
 All notable changes to this project will be documented in this file.
 
-##[3.0.0] - 20116-9-10
+##[3.0.0] - 2016-09-10
 
 **Revised file structure:**
 
@@ -13,7 +13,7 @@ All notable changes to this project will be documented in this file.
     - Created csl folder for csl specific less files
 
 
-##[3.0.1] - 2016-9-18
+##[3.0.1] - 2016-09-18
 
 - Fixed double pop-up on calender links
 - Add ThemeMagic support for custom CSL LESS variables
@@ -22,3 +22,10 @@ All notable changes to this project will be documented in this file.
 - Adjusted Bootstrap header column definitions for better flexibility
 - Adjusted header to allow for variables height adjusted to content
 - Removed icon class from search markup to prevent icomoon icon showing
+
+##[3.0.2] - 2016-09-25
+
+- Fixed CSS width on RSForms! Pro field label to inherit bootstrap width
+- Added CSS formatting to RSForms! Pro "2 Lines (XHMTL)" auto-generated layout
+- Fixed ThemeMagic JCALPro month separator font style and font weight options
+- 
