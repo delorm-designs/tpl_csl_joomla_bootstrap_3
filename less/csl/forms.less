@@ -83,6 +83,19 @@ form.xhtml_block {
   h2 {
     margin-bottom: 0;
   }
+legend {
+    border: none;
+    margin: 0 0 20px;
+    line-height: 1.2;
+    letter-spacing: 1px;
+    color: @headings-color;
+    font-size: @font-size-base + 10px;
+    font-family: @headings-font-family;
+    font-weight: @headings-font-weight;
+    small {
+      font-size: @font-size-base + 8px;
+    }
+  }
   button,
   input[type="reset"],
   input[type="submit"] {
@@ -147,6 +160,7 @@ form.xhtml_block {
   .formCaption,
   .formCaption1,
   .formCaption2 {
+    width: inherit;
     color: @form-label-font-color;
     font-size: @form-label-font-size;
     font-family: @form-label-font-family;

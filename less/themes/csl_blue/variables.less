@@ -25,10 +25,6 @@
 // Header
 // -------------------------
 
-// Header Line Sizes
-@header-text-lines:                  6;
-@header-total-lines:                 9;
-
 // Header Font Style
 @header-font-size:                   14px;
 @header-font-color:                  #2D679A;
@@ -36,7 +32,7 @@
 @header-font-weight:                 normal;
 @header-font-margin:                 6px;
 @header-font-family:                 @font-family-sans-serif;
-@header-line-height:                 @header-font-size   + @header-font-margin;
+@header-line-height:                 @header-font-size + @header-font-margin;
 
 
 // Forms
@@ -95,6 +91,19 @@
 @dropdown-header-color:              @gray-light;
 
 @dropdown-caret-color:               #000;
+
+
+// Typography
+// -------------------------
+@font-family-base:        @font-family-sans-serif;
+
+@font-size-base:          14px;
+
+@line-height-base:        1.428571429; // 20/14
+@line-height-computed:    floor(@font-size-base * @line-height-base); // ~20px
+
+@headings-font-family:    @font-family-base;
+@headings-color:          #004F88;
 
 
 // COMPONENT VARIABLES
