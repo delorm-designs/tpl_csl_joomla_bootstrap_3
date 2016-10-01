@@ -2,23 +2,27 @@
 // TYPOGRAPHY
 // ---------------------------------------------------------
 h1, h2, h3, h4, h5, h6 {
-  line-height: 1.2;
   margin: 0 0 10px;
   color: @headings-color;
+  line-height: @headings-line-height;
   font-family: @headings-font-family;
   font-weight: @headings-font-weight;
+  letter-spacing: @headings-letter-spacing;
 }
 
-h4, h5, h6 {
-  color: #A23B2F;
-  font-weight: normal;
-  line-height: normal;
-  letter-spacing: normal;
+h1 small,
+h2 small,
+h3 small,
+h4 small,
+h5 small,
+h6 small {
+  color: @headings-small-color;
+  font-weight: @headings-small-font-weight;
+  line-height: @headings-small-line-height;
+  letter-spacing: @headings-small-letter-spacing;
 }
 
 h1 {
-  margin: 0 0 20px;
-  letter-spacing: 1px;
   font-size: @font-size-h1;
   small {
     font-size: @font-size-h1 - 2px;
@@ -26,7 +30,6 @@ h1 {
 }
 
 h2 {
-  letter-spacing: 1px;
   font-size: @font-size-h2;
   small {
     font-size: @font-size-h2 - 2px;
@@ -34,7 +37,6 @@ h2 {
 }
 
 h3 {
-  letter-spacing: 1px;
   font-size: @font-size-h3;
   small {
     font-size: @font-size-h3 - 2px;
