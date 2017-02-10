@@ -30,7 +30,7 @@ if ($headright = $this->countModules('head-search or languageswitcherload')) {
 	<div class="row">
 
         <!-- LOGO -->
-        <div class="col-us-12 col-xs-6 col-sm-6 col-md-5 col-lg-4">
+        <div class="col-us-12 col-xs-6 col-sm-6 col-md-4 col-lg-4">
             <div class="logo-<?php echo $logotype, ($logoimgsm ? ' logo-control' : '') ?>">
                 <a href="<?php echo JURI::base(true) ?>" title="<?php echo strip_tags($sitename) ?>">
                     <?php if($logotype == 'image'): ?>
@@ -46,7 +46,7 @@ if ($headright = $this->countModules('head-search or languageswitcherload')) {
         </div>
         <!-- //LOGO -->
 
-        <div class="col-us-12 col-xs-6 col-sm-6 col-md-4 col-lg-5">
+        <div class="col-us-12 col-xs-6 col-sm-6 col-md-5 col-lg-5">
             <?php if ($this->countModules('header-1')) : ?>
                 <div class="header-left <?php $this->_c('header-1') ?>">
                     <jdoc:include type="modules" name="<?php $this->_p('header-1') ?>" style="raw" />
