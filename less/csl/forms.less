@@ -64,6 +64,17 @@ input[type="color"]:focus,
   border-color: inherit;
 }
 
+.btn {
+  border-radius: 0;
+}
+
+.btn-primary {
+  &:hover {
+    background-color: @btn-primary-hover;
+  }
+}
+
+
 // INPUT ADDON
 // ------------------
 .input-group-addon {
@@ -205,8 +216,11 @@ form.xhtml_inline {
     text-transform: lowercase;
     font-size: @sidebar-form-input-font-size;
   }
-  .input-group-addon {
-    padding: 0px;
+  div.finder {
+    margin-bottom: 0;
+  }
+  div.input-group-addon {
+    padding: 0;
     border-left: none;
   }
   button {
