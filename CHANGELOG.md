@@ -28,4 +28,22 @@ All notable changes to this project will be documented in this file.
 - Fixed CSS width on RSForms! Pro field label to inherit bootstrap width
 - Added CSS formatting to RSForms! Pro "2 Lines (XHMTL)" auto-generated layout
 - Fixed ThemeMagic JCALPro month separator font style and font weight options
-- 
+- Remove header-fixed-height variable and made the entire header have fluid
+- Fixed JCALPro font style and weight options in ThemeMagic definitions
+- Updated font style and font weights and added missing form header styles
+- Fixed mobile sidebar width issues in the responsive design
+
+Commits on Oct 01, 2016
+- Removed unused definitions from CSL specific LESS and ThemeMagic files
+- Use separate variables for h1-h6 font size to allow better themeing
+- Made headings styles and RSForms legend header more consistent over-all 
+
+Commits on Feb 09, 2017
+- Changed column sizing, module spacing and other, miscellaneous changes
+- Applied various button fixes, color variation fixes, and BS3 updates
+
+Commits on Feb 11, 2017
+- Modified header positions for better control of dynamic height header
+- Made updates to off-canvas header bar styles to allow for themeing
+- Made button primary themeable to the primary theme chosen for consistency
+- Miscellaneous updates made throughout the CSL LESS files for consistency
