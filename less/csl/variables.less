@@ -78,7 +78,14 @@
 @sidebar-form-input-min-height:      20px;
 
 
-@btn-primary-hover:                  #C9E3EE;
+// Buttons
+// -------------------------
+
+@btn-primary-color:              #fff;
+@btn-primary-bg:                 #2D679A;
+@btn-primary-hover:              #C9E3EE;
+@btn-primary-border:             darken(@btn-primary-bg, 5%);
+@btn-primary-hover-color:        #2D679A;
 
 
 // Dropdowns
@@ -114,11 +121,11 @@
 @font-size-large:                    ceil(@font-size-base * 1.25); // ~18px
 @font-size-small:                    ceil(@font-size-base * 0.85); // ~12px
 
-@font-size-h1:                       floor(@headings-font-size-base * 2.6); // ~36px
-@font-size-h2:                       floor(@headings-font-size-base * 2.15); // ~30px
-@font-size-h3:                       ceil(@headings-font-size-base * 1.7); // ~24px
+@font-size-h1:                       ceil(@headings-font-size-base * 1.85); // ~26px
+@font-size-h2:                       ceil(@headings-font-size-base * 1.70); // ~24px
+@font-size-h3:                       ceil(@headings-font-size-base * 1.40); // ~20px
 @font-size-h4:                       ceil(@headings-font-size-base * 1.25); // ~18px
-@font-size-h5:                       @headings-font-size-base;
+@font-size-h5:                       ceil(@headings-font-size-base * 1.00); // ~14px
 @font-size-h6:                       ceil(@headings-font-size-base * 0.85); // ~12px
 
 @line-height-base:                   1.428571429; // 20/14
@@ -178,6 +185,20 @@
 @navbar-default-toggle-hover-bg:     #2D679A;
 @navbar-default-toggle-icon-bar-bg:  #CCC;
 @navbar-default-toggle-border-color: #DDD;
+
+
+// Off-canvas
+// -------------------------
+
+// Basics of a off-canvas
+@off-canvas-default-bg:              #A6B281;
+@off-canvas-default-color:           #FFFFFF;
+
+// Off-canvas toggle
+@off-canvas-close-bg:                #bbbbbb;
+@off-canvas-toggle-bg:               #A6B281;
+@off-canvas-toggle-color:            #FFFFFF;
+@off-canvas-toggle-border:           darken(@off-canvas-toggle-bg, 6.5%);
 
 
 // MODULES
