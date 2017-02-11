@@ -3,11 +3,18 @@
 // ---------------------------------------------------------
 h1, h2, h3, h4, h5, h6 {
   margin: 0 0 10px;
-  color: @headings-color;
   line-height: @headings-line-height;
   font-family: @headings-font-family;
   font-weight: @headings-font-weight;
   letter-spacing: @headings-letter-spacing;
+}
+
+h1, h2, h3 {
+  color: @headings-color;
+}
+
+h4, h5, h6 {
+  color: @headings-small-color;
 }
 
 h1 small,
