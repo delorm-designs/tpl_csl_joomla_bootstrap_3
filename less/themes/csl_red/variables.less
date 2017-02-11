@@ -36,12 +36,7 @@
 @header-font-weight:                 normal;
 @header-font-margin:                 6px;
 @header-font-family:                 @font-family-sans-serif;
-
-// Header Calculated Heights
-@header-link-lines:                  @header-total-lines - @header-text-lines;
 @header-line-height:                 @header-font-size   + @header-font-margin;
-@header-right-height:                @header-line-height * @header-text-lines;
-@header-fixed-height:                @header-line-height * @header-total-lines;
 
 
 // Forms
@@ -100,6 +95,19 @@
 @dropdown-header-color:              @gray-light;
 
 @dropdown-caret-color:               #000;
+
+
+// Typography
+// -------------------------
+@font-family-base:        @font-family-sans-serif;
+
+@font-size-base:          14px;
+
+@line-height-base:        1.428571429; // 20/14
+@line-height-computed:    floor(@font-size-base * @line-height-base); // ~20px
+
+@headings-font-family:    @font-family-base;
+@headings-color:          #2D679A;
 
 
 // COMPONENT VARIABLES

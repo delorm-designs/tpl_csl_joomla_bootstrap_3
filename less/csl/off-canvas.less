@@ -2,16 +2,16 @@
 // OFF CANVAS
 // ---------------------------------------------------------
 .off-canvas-toggle {
-  background-color: darken(@navbar-default-bg, 5%);
+  background-color: @off-canvas-toggle-bg;
 }
 
 .off-canvas-toggle:hover,
 .off-canvas-toggle:focus,
 .off-canvas-toggle:active,
 .off-canvas-toggle.active {
-  background-color: #214d73;
-  border-color: #193a57;
-  color: #ffffff;
+  color: @off-canvas-toggle-color;
+  border-color: @off-canvas-toggle-border;
+  background-color: @off-canvas-toggle-bg;
 }
 
 .t3-off-canvas {
@@ -19,18 +19,18 @@
     width: 28px !important;
     height: 28px !important;
     line-height: 28px !important;
-    background: none repeat scroll 0 0 #bbbbbb;
+    background: @off-canvas-close-bg;
   }
 }
 
 .t3-off-canvas-header {
   h2 {
     display: none;
-    color: @white !important;
+    color: @off-canvas-default-color !important;
     line-height: 28px !important;
   }
   height: 28px !important;
-  background: #6B7A25 !important;
+  background: @off-canvas-default-bg !important;
 }
 
 .t3-off-canvas-body {

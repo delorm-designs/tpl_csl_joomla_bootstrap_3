@@ -2,6 +2,11 @@
 // MODULES
 // ---------------------------------------------------------
 .t3-module {
+  .module-ct {
+    a, label {
+      color: @black;
+    }
+  }
   .module-title {
     margin: 0 0 7px;
     text-align: center;
@@ -14,7 +19,7 @@
     font-family: @module-title-font-family;
     line-height: @module-title-font-size + 8px;
   }
-  margin-bottom: @grid-gutter-width;
+  margin-bottom: @grid-gutter-width * 3;
 }
 
 // LINK BUTTON
@@ -70,7 +75,6 @@ a.link-button:hover {
         list-style: none;
         > li {
           > a:link,
-          > a:active,
           > a:visited {
             background-color: @accordion-collapsed-base-color;
           }
@@ -78,34 +82,49 @@ a.link-button:hover {
             text-decoration: underline;
             background-color: @accordion-collapsed-hover-color;
           }
+          > a:active,
           > a.active {
             background-color: @accordion-collapsed-active-color;
           }
           > ul {
             > li {
-              margin: 3px 0 0;
               > a:link,
-              > a:active,
               > a:visited {
                 background-color: @accordion-expanded-base-color;
               }
               > a:hover  {
                 background-color: @accordion-expanded-hover-color;
               }
+              > a:active,
               > a.active {
                 background-color: @accordion-expanded-active-color;
               }
             }
+            > li.active a {
+              background-color: @accordion-expanded-active-color;
+            }
             > li:last-child {
               margin: 0;
             }
-            margin: 0px;
-            padding: 0px;
+            top: 0;
+            left: 0;
+            padding: 0;
+            float: none;
+            border: none;
+            display: block;
             list-style: none;
+            box-shadow: none;
+            margin: 3px 0 0 0;
+            position: relative;
+            border-radius: 0 0 0 0;
+            background-color: transparent;
           }
         }
         .caret {
           display: none;
+        }
+        > li.active a {
+          background-color: @accordion-collapsed-active-color;
         }
       }
     }
@@ -158,6 +177,9 @@ a.link-button:hover {
             background-color: @accordion-collapsed-active-color;
           }
         }
+        li.active a {
+          background-color: @accordion-collapsed-active-color;
+        }
         .accordion-inner {
           a:link,
           a:active,
@@ -168,6 +190,9 @@ a.link-button:hover {
             background-color: @accordion-expanded-hover-color;
           }
           a.active {
+            background-color: @accordion-expanded-active-color;
+          }
+          li.active a {
             background-color: @accordion-expanded-active-color;
           }
           li:last-child {

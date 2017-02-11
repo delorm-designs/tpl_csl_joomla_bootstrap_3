@@ -60,6 +60,7 @@
 		<position>sidebar-2</position>
 		<position>mast-col</position>
 		<position>footer</position>
+		<position>slider</position>
 		<position>home-0</position>
 		<position>home-1</position>
 		<position>home-2</position>
@@ -82,6 +83,9 @@
 		<position>position-13</position>
 		<position>position-14</position>
 		<position>position-15</position>
+		<position>header-left</position>
+		<position>header-right</position>
+		<position>header-bottom</position>
 		<position>footer-0</position>
 		<position>footer-1</position>
 		<position>footer-2</position>
