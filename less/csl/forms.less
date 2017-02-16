@@ -88,7 +88,8 @@ input[type="color"]:focus,
 
 // RS FORMS BLOCK
 // ------------------
-form.xhtml_block {
+form.xhtml_block,
+form.xhtml_inline {
   h1 {
     margin: 0 0 10px;
   }
@@ -120,7 +121,7 @@ legend {
     background-image: none;
     font-weight: @btn-font-weight;
     border: 1px solid transparent;
-    .button-size(@padding-base-vertical; @padding-base-horizontal; @font-size-base; @line-height-base; @border-radius-base);
+    .button-size(@padding-base-vertical; @padding-base-horizontal; @font-size-base; @line-height-base; 0);
     .user-select(none);
     &,
     &:active,
@@ -203,8 +204,6 @@ legend {
 
 // RS FORMS INLINE
 // ------------------
-form.xhtml_inline {
-}
 
 
 // SEARCH FORM
@@ -241,10 +240,6 @@ form.xhtml_inline {
 // LOGIN FORM
 // ------------------
 #login-form {
-  ul {
-    //padding: 0 10px;
-    //font-size: 12px;
-  }
   .form-group {
     margin-bottom: 15px;
   }
@@ -267,6 +262,7 @@ form.xhtml_inline {
   }
   button.btn, input.btn[type="submit"] {
     width: 100%;
+    border-radius: 0 0 0 0;
     text-transform: uppercase;
   }
 }

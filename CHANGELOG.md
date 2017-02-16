@@ -23,7 +23,7 @@ All notable changes to this project will be documented in this file.
 - Adjusted header to allow for variables height adjusted to content
 - Removed icon class from search markup to prevent icomoon icon showing
 
-##[3.0.2] - 2016-09-25
+##[3.0.2] - 2017-02-16
 
 - Fixed CSS width on RSForms! Pro field label to inherit bootstrap width
 - Added CSS formatting to RSForms! Pro "2 Lines (XHMTL)" auto-generated layout
@@ -47,3 +47,10 @@ Commits on Feb 11, 2017
 - Made updates to off-canvas header bar styles to allow for themeing
 - Made button primary themeable to the primary theme chosen for consistency
 - Miscellaneous updates made throughout the CSL LESS files for consistency
+
+Commits on Feb 16, 2017
+- Add xhtml-inline form styles
+- Make button on forms more consistent
+- Correct a tag color over-ride in modules
+- Correct font size and line height modules
+- Add JCalPro3 Events module over-ride html
