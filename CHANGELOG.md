@@ -23,7 +23,7 @@ All notable changes to this project will be documented in this file.
 - Adjusted header to allow for variables height adjusted to content
 - Removed icon class from search markup to prevent icomoon icon showing
 
-##[3.0.2] - 2017-02-16
+##[3.0.2] - 2017-02-22
 
 - Fixed CSS width on RSForms! Pro field label to inherit bootstrap width
 - Added CSS formatting to RSForms! Pro "2 Lines (XHMTL)" auto-generated layout
@@ -49,8 +49,14 @@ Commits on Feb 11, 2017
 - Miscellaneous updates made throughout the CSL LESS files for consistency
 
 Commits on Feb 16, 2017
-- Add xhtml-inline form styles
-- Make button on forms more consistent
-- Correct a tag color over-ride in modules
-- Correct font size and line height modules
-- Add JCalPro3 Events module over-ride html
+- Add xhtml-inline form styles for greater default form coverage
+- Make button on forms more consistent with buttons in the core
+- Correct \<a> tag color over-ride in modules to match core links
+- Correct font size and line height in modules to match core sizes
+- Add JCalPro3 events module over-ride html for calendar link options 
+
+Commits on Feb 22, 2017
+- Correct off-canvas link color to match sidebar and core links
+- Drop non-working off-canvas close button so make it less confusing
+- Correct off-canvas button on tablet mode so that it actually works
+- Bump version to 3.0.2 for preparation on new release cycle
