@@ -55,7 +55,7 @@ if ($headright = $this->countModules('head-search or languageswitcherload')) {
             <div class="row">
                 <div class="col-xs-12">
                     <?php if ($this->countModules('header-bottom')) : ?>
-                        <div class="header-left <?php $this->_c('header-bottom') ?>">
+                        <div class="header-bottom <?php $this->_c('header-bottom') ?>">
                             <jdoc:include type="modules" name="<?php $this->_p('header-bottom') ?>" style="raw" />
                         </div>
                     <?php endif ?>
