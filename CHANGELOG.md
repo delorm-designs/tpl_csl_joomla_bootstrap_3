@@ -62,4 +62,5 @@ Commits on Feb 22, 2017
 - Bump version to 3.0.2 for preparation on new release cycle
 
 ##[3.0.3] - 2017-3-10
+- Minor corrections to navbar and off-canvas colors
 - Fixed issue with header height related it's modules
