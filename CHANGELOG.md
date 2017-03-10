@@ -60,3 +60,6 @@ Commits on Feb 22, 2017
 - Drop non-working off-canvas close button so make it less confusing
 - Correct off-canvas button on tablet mode so that it actually works
 - Bump version to 3.0.2 for preparation on new release cycle
+
+##[3.0.3] - 2017-3-10
+- Fixed issue with header height related it's modules
