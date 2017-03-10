@@ -64,3 +64,7 @@ Commits on Feb 22, 2017
 ##[3.0.3] - 2017-3-10
 - Minor corrections to navbar and off-canvas colors
 - Fixed issue with header height related it's modules
+
+##[3.0.4] - 2017-3-10
+- Minor updates to installer manifest
+- Revert header bottom min height specification
