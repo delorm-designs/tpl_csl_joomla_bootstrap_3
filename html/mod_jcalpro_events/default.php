@@ -6,7 +6,7 @@
 **********************************************
 JCal Pro
 Copyright (c) 2006-2012 Anything-Digital.com
-Copyright (c) 2016 Open Source Training, LLC
+Copyright (c) 2016-2017 Open Source Training, LLC
 **********************************************
 JCalPro is a native Joomla! calendar component for Joomla!
 
@@ -34,9 +34,13 @@ https://joomlashack.com
 defined('JPATH_PLATFORM') or die;
 
 JHtml::_('behavior.tooltip');
+JHtml::_('behavior.modal');
+JHtml::_('script', 'com_jcalpro/modal.min.js', array('relative' => true));
 
 $tipClass = 'hasTip';
 $tipSep   = '::';
+$urlparams['tmpl'] = 'component';
+
 if (JCalPro::version()->isCompatible('3.0.0')) {
     $tipClass = 'hasTooltip';
     $tipSep   = '<br>';
@@ -100,7 +104,7 @@ if (JCalPro::version()->isCompatible('3.0.0')) {
 					<img class="<?php echo $tipClass; ?>" title="<?php echo JCalProHelperFilter::escape($location_tooltip); ?>" src="<?php echo JCalProHelperTheme::getFilePath('icon-event-location.png', 'images/events'); ?>" />
 				</a>
 				<?php endif; ?>
-				<a href="<?php echo JCalProHelperUrl::event($item->id, true, $urlparams); ?>" title="<?php echo JCalProHelperFilter::escape($item->title); ?>"><?php
+				<a href="#" title="<?php echo JCalProHelperFilter::escape($item->title); ?>" onclick="SqueezeBox.fromElement('<?php echo JCalProHelperUrl::event($item->id, true, $urlparams); ?>', {size:{x:700,y:555}, handler:'iframe'});"><?php
                     if ($limit_title) :
                         echo JCalProHelperFilter::escape(JCalProHelperFilter::truncate($item->title, $limit_title));
                     else :
@@ -172,7 +176,7 @@ if (JCalPro::version()->isCompatible('3.0.0')) {
 	</span>
 <?php endif; ?>
 <?php if ((int) $params->get('display_events_link', 1)) : ?>
-	<span class="jcalpro_calendar_link">
+	<span class="jcalpro_events_link">
 		<a href="<?php echo JCalProHelperUrl::events('', 'month', true, $urlparams); ?>" title="<?php echo JCalProHelperFilter::escape(JText::_('MOD_JCALPRO_EVENTS_DISPLAY_EVENTS_LINK_TEXT')); ?>"><?php
             echo JCalProHelperFilter::escape(JText::_('MOD_JCALPRO_EVENTS_DISPLAY_EVENTS_LINK_TEXT'));
         ?></a>

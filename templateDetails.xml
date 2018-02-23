@@ -2,8 +2,8 @@
 <!DOCTYPE install PUBLIC "-//Joomla! 1.6//DTD template 1.0//EN" "http://www.joomla.org/xml/dtd/1.6/template-install.dtd">
 <extension version="2.5" type="template" method="upgrade" client="site">
 	<name>t3_csl</name>
-	<version>3.0.4</version>
-	<creationDate>March 3 2017</creationDate>
+	<version>3.0.5</version>
+	<creationDate>February 22 2018</creationDate>
 	<author>de Lorm Designs</author>
 	<authorEmail>solutions@delormdesigns.com</authorEmail>
 	<authorUrl>http://www.delormdesigns.com/</authorUrl>
