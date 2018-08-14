@@ -168,7 +168,7 @@ if (JCalPro::version()->isCompatible('3.0.0')) {
 	<?php endforeach; ?>
 	</ul>
 <?php endif; ?>
-<?php if (JCalPro::canAddEvents() && (int) $params->get('display_add', 1)) : ?>
+<?php if (JCalProHelperAccess::canAddEvents() && (int) $params->get('display_add', 1)) : ?>
 	<span class="jcalpro_events_add">
 		<a href="<?php echo JCalProHelperUrl::task('event.add', true, $urlparams); ?>" title="<?php echo JCalProHelperFilter::escape(JText::_('MOD_JCALPRO_EVENTS_DISPLAY_ADD_TEXT')); ?>"><?php
             echo JCalProHelperFilter::escape(JText::_('MOD_JCALPRO_EVENTS_DISPLAY_ADD_TEXT'));

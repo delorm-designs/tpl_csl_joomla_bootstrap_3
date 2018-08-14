@@ -69,5 +69,9 @@ Commits on Feb 22, 2017
 - Minor updates to installer manifest
 - Revert header bottom min height specification
 
-##[3.0.5] - 2018-22-18
+##[3.0.5] - 2018-2-18
 - Corrected HTML over-ride for JCAL Pro Events module for working event popups.
+
+##[3.0.6] - 2018-2-18
+- Changed JCalPro::canAddEvents() to JCalProHelperAccess::canAddEvents() in JCALPro over-rides.
+
