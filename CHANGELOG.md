@@ -75,3 +75,5 @@ Commits on Feb 22, 2017
 ##[3.0.6] - 2018-2-18
 - Changed JCalPro::canAddEvents() to JCalProHelperAccess::canAddEvents() in JCALPro over-rides.
 
+##[3.0.7] - 2019-3-09
+- Added en-GB.com_jcalpro.ini to the templates folder to be included as part of the template installation for JCAL Pro language fixes.

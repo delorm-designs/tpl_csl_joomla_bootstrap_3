@@ -2,8 +2,8 @@
 <!DOCTYPE install PUBLIC "-//Joomla! 1.6//DTD template 1.0//EN" "http://www.joomla.org/xml/dtd/1.6/template-install.dtd">
 <extension version="2.5" type="template" method="upgrade" client="site">
 	<name>t3_csl</name>
-	<version>3.0.6</version>
-	<creationDate>July 12 2018</creationDate>
+	<version>3.0.7</version>
+	<creationDate>March 9 2019</creationDate>
 	<author>de Lorm Designs</author>
 	<authorEmail>solutions@delormdesigns.com</authorEmail>
 	<authorUrl>http://www.delormdesigns.com/</authorUrl>
@@ -47,6 +47,7 @@
 	</files>
 	
 	<languages folder="language">
+		<language tag="en-GB">en-GB.com_jcalpro.ini</language>
 		<language tag="en-GB">en-GB/en-GB.tpl_t3_csl.ini</language>
 		<language tag="en-GB">en-GB/en-GB.tpl_t3_csl.sys.ini</language>
 	</languages>
