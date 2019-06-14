@@ -80,3 +80,6 @@ Commits on Feb 22, 2017
 
 ##[3.0.8] - 2019-3-12
 - Added missing en-GB path to language entry for en-GB.com_jcalpro.ini to be included in the template installation for JCAL Pro language fixes.
+
+##[3.0.9] - 2019-6-13
+- Removed unneeded com_jcalpro template over-rides as this is duplicated in the jcalpro_classic_theme.
