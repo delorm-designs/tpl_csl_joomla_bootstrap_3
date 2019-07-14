@@ -83,3 +83,6 @@ Commits on Feb 22, 2017
 
 ##[3.0.9] - 2019-6-13
 - Removed unneeded com_jcalpro template over-rides as this is duplicated in the jcalpro_classic_theme.
+
+##[3.0.10] - 2019-7-14
+- Added CSS over-ride (!important) for .navbar min-height that was over-ridden by recent RS Forms updates.
